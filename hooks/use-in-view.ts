@@ -6,7 +6,10 @@ interface UseInViewOptions {
   triggerOnce?: boolean;
 }
 
-export function useInView(options: UseInViewOptions = {}) {
+export function useInView(options: UseInViewOptions = {}): {
+  ref: React.RefObject<HTMLDivElement | null>;
+  isInView: boolean;
+} {
   const { threshold = 0.1, rootMargin = "0px", triggerOnce = true } = options;
   const [isInView, setIsInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
