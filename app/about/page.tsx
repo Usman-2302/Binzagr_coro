@@ -75,7 +75,7 @@ function TimelineSection() {
     });
 
     const scaleY = useSpring(scrollYProgress, {
-        stately: 100,
+        stiffness: 100,
         damping: 30,
         restDelta: 0.001,
     });
