@@ -3,7 +3,7 @@ import { Leaf, Recycle, Globe } from "lucide-react";
 
 export function SustainabilitySection() {
     return (
-        <section className="py-24 bg-emerald-50/40 overflow-hidden relative border-y border-secondary/5">
+        <section className="py-20 md:py-32 bg-emerald-50/40 overflow-hidden relative border-y border-secondary/5">
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Side: Imagery */}
@@ -35,9 +35,9 @@ export function SustainabilitySection() {
                         className="space-y-8"
                     >
                         <div className="space-y-4">
-                            <h4 className="text-primary font-bold tracking-widest uppercase text-sm">Our Commitment</h4>
+                            <h4 className="text-accent font-bold tracking-widest uppercase text-sm">Our Commitment</h4>
                             <h2 className="text-4xl md:text-5xl font-black leading-tight text-secondary">
-                                Sustainable Future for the Next <span className="text-gradient">Generations</span>
+                                Sustainable Future for the Next <span className="text-accent italic">Generations</span>
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed">
                                 At Binzagr Coro, sustainability isn't just a goal; it's our core responsibility.
@@ -49,17 +49,17 @@ export function SustainabilitySection() {
                         <div className="grid gap-6">
                             {[
                                 {
-                                    icon: <Leaf className="w-6 h-6 text-primary" />,
+                                    icon: <Leaf className="w-6 h-6 text-accent" />,
                                     title: "Eco-Friendly Packaging",
                                     desc: "Transitioning to 100% recyclable materials across all our product lines by 2026."
                                 },
                                 {
-                                    icon: <Recycle className="w-6 h-6 text-primary" />,
+                                    icon: <Recycle className="w-6 h-6 text-accent" />,
                                     title: "Waste Reduction",
                                     desc: "State-of-the-art manufacturing processes that minimize water and energy consumption."
                                 },
                                 {
-                                    icon: <Globe className="w-6 h-6 text-primary" />,
+                                    icon: <Globe className="w-6 h-6 text-accent" />,
                                     title: "Vision 2030 Goals",
                                     desc: "Supporting the Saudi Green Initiative through reforestation and clean energy adoption."
                                 }
@@ -67,13 +67,13 @@ export function SustainabilitySection() {
                                 <motion.div
                                     key={index}
                                     whileHover={{ x: 10 }}
-                                    className="flex gap-4 p-4 rounded-2xl hover:bg-secondary/5 transition-colors"
+                                    className="flex gap-4 p-4 rounded-2xl hover:bg-accent/5 transition-colors group"
                                 >
-                                    <div className="shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <div className="shrink-0 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center transition-transform group-hover:scale-110">
                                         {item.icon}
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-secondary text-lg">{item.title}</h4>
+                                        <h4 className="font-bold text-secondary text-lg group-hover:text-accent transition-colors">{item.title}</h4>
                                         <p className="text-muted-foreground">{item.desc}</p>
                                     </div>
                                 </motion.div>

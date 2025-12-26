@@ -25,7 +25,7 @@ export default function ContactPage() {
 
     return (
         <>
-            <section className="pt-32 pb-16 bg-gradient-dark">
+            <section className="pt-40 pb-24 bg-gradient-dark">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6">Contact Us</h1>
                     <p className="text-xl text-primary-foreground/70 max-w-2xl mx-auto">We'd love to hear from you. Get in touch with our team.</p>

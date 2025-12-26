@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 
 interface UseCounterOptions {
   end: number;
@@ -13,11 +13,15 @@ export function useCounter({ end, duration = 2000, start = 0 }: UseCounterOption
 } {
   const [count, setCount] = useState(start);
   const [isAnimating, setIsAnimating] = useState(false);
+  const isAnimatingRef = useRef(false);
   const frameRef = useRef<number | null>(null);
 
-  const startAnimation = (): void => {
-    if (isAnimating) return;
+  const startAnimation = useCallback((): void => {
+    if (isAnimatingRef.current) return;
+
+    isAnimatingRef.current = true;
     setIsAnimating(true);
+    setCount(start); // Reset to start value
 
     const startTime = Date.now();
     const difference = end - start;
@@ -36,11 +40,12 @@ export function useCounter({ end, duration = 2000, start = 0 }: UseCounterOption
         frameRef.current = requestAnimationFrame(animate);
       } else {
         setIsAnimating(false);
+        isAnimatingRef.current = false;
       }
     };
 
     frameRef.current = requestAnimationFrame(animate);
-  };
+  }, [end, duration, start]);
 
 
   useEffect(() => {

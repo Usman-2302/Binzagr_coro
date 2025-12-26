@@ -57,6 +57,9 @@ function StatCard({
   useEffect(() => {
     if (isInView) {
       startAnimation();
+    } else {
+      // Optional: reset count when leaving view to be ready for next entrance
+      // Although startAnimation handles it, this ensures a clean state
     }
   }, [isInView, startAnimation]);
 
@@ -77,7 +80,7 @@ function StatCard({
 }
 
 export function StatsSection() {
-  const { ref, isInView } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref, isInView } = useInView({ threshold: 0.3, triggerOnce: false });
 
   return (
     <Section className="bg-orange-50/50 relative overflow-hidden border-y border-secondary/5">

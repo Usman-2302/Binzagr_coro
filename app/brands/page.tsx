@@ -17,7 +17,7 @@ const brands = [
 export default function BrandsPage() {
     return (
         <>
-            <section className="relative pt-48 pb-32 overflow-hidden bg-black">
+            <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-black">
                 {/* Background Image with Parallax-esque effect */}
                 <motion.div
                     initial={{ scale: 1.1, opacity: 0 }}
@@ -50,7 +50,7 @@ export default function BrandsPage() {
             </section>
 
             {brands.map((brand, i) => (
-                <Section key={brand.id} id={brand.id} className={i % 2 === 1 ? "bg-muted/10 py-32" : "py-32"}>
+                <Section key={brand.id} id={brand.id} className={i % 2 === 1 ? "bg-muted/10" : ""}>
                     <div className="container mx-auto px-4">
                         <div className={`grid lg:grid-cols-2 gap-20 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                             <motion.div
@@ -133,18 +133,20 @@ function BrandImage({ brand }: { brand: any }) {
                 rotateX,
                 transformStyle: "preserve-3d",
             }}
-            className={`relative bg-gradient-to-br ${brand.color} rounded-[4rem] p-16 flex items-center justify-center shadow-2xl`}
+            className={`relative bg-gradient-to-br ${brand.color} rounded-[4rem] p-16 flex items-center justify-center shadow-2xl overflow-hidden`}
         >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.4),transparent_60%)] pointer-events-none" />
             <motion.img
                 style={{
                     translateZ: 100,
                 }}
                 src={brand.image}
                 alt={brand.name}
-                className="h-80 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                className="h-80 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] brightness-110 contrast-110 saturate-110"
             />
             {/* Gloss Highlight */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent pointer-events-none rounded-[4rem]" />
+            <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none rounded-[4rem]" />
         </motion.div>
     );
 }

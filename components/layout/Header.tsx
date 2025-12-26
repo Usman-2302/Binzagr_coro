@@ -101,7 +101,7 @@ export function Header() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 w-[400px] glass-card rounded-2xl p-6 mt-2 grid grid-cols-3 gap-4"
+                    className="absolute top-full left-1/2 -translate-x-1/2 w-[450px] bg-white/95 backdrop-blur-xl rounded-[2rem] p-8 mt-4 grid grid-cols-3 gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/20"
                   >
                     {brandsMenuData.map((brand) => (
                       <Link

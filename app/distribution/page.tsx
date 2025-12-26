@@ -7,17 +7,19 @@ const cities = [
     { name: "Riyadh", x: 600, y: 350, id: "riyadh" },
     { name: "Jeddah", x: 300, y: 400, id: "jeddah" },
     { name: "Dammam", x: 700, y: 250, id: "dammam" },
+    { name: "Khobar", x: 740, y: 270, id: "khobar" },
 ];
 
 const connections = [
     { from: "Jeddah", to: "Riyadh" },
     { from: "Riyadh", to: "Dammam" },
+    { from: "Dammam", to: "Khobar" },
 ];
 
 export default function DistributionPage() {
     return (
         <div className="min-h-screen bg-white">
-            <section className="relative py-48 bg-secondary overflow-hidden">
+            <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-secondary overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img src="/assets/sources/Rectangle-13.png" className="w-full h-full object-cover opacity-60" alt="Logistics Center" />
                     <div className="absolute inset-0 bg-gradient-to-b from-secondary/80 via-secondary/40 to-secondary/90" />
@@ -40,7 +42,7 @@ export default function DistributionPage() {
                 </div>
             </section>
 
-            <section className="py-24">
+            <section className="py-20 md:py-24">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Stats */}
@@ -70,10 +72,13 @@ export default function DistributionPage() {
                         </div>
 
                         {/* Interactive Map */}
-                        <div className="lg:col-span-2 relative bg-secondary/5 rounded-3xl p-8 overflow-hidden min-h-[600px] flex items-center justify-center">
+                        <div className="lg:col-span-2 relative bg-secondary/5 rounded-3xl p-4 md:p-8 overflow-hidden min-h-[400px] md:min-h-[600px] flex items-center justify-center">
+                            <div className="absolute inset-0 opacity-10 pointer-events-none">
+                                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.15),transparent_70%)]" />
+                            </div>
                             <svg
                                 viewBox="0 0 1000 700"
-                                className="w-full h-full max-w-3xl"
+                                className="w-full h-full max-w-4xl scale-[1.2] md:scale-100 transition-transform"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
@@ -143,13 +148,13 @@ export default function DistributionPage() {
                     </div>
                 </div>
             </section>
-            <section className="py-32 bg-muted/30">
+            <section className="py-20 md:py-32 bg-muted/30">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
-                        <div className="space-y-8">
+                        <div className="space-y-8 text-left">
                             <div className="w-16 h-1.5 bg-primary" />
-                            <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight uppercase">Strategic <br /><span className="text-primary italic">Infrastructure</span></h2>
-                            <p className="text-xl text-muted-foreground leading-relaxed">
+                            <h2 className="text-3xl md:text-5xl font-black text-secondary leading-tight uppercase">Strategic <br /><span className="text-primary italic">Infrastructure</span></h2>
+                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                                 Our logistics ecosystem is built on precision. With multi-temperature storage facilities
                                 and a fleet of over 500 specialized vehicles, we maintain the integrity of our brands
                                 at every touchpoint from Riyadh to the edges of the Kingdom.

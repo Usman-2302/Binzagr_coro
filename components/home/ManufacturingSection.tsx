@@ -3,7 +3,7 @@ import { ShieldCheck, Factory, Zap } from "lucide-react";
 
 export function ManufacturingSection() {
     return (
-        <section className="bg-white py-24 md:py-32 border-t-8 border-muted/50 overflow-hidden relative">
+        <section className="bg-white py-20 md:py-32 border-t-8 border-muted/50 overflow-hidden relative">
             <div className="absolute top-0 left-0 w-full h-px bg-white/10" />
             <div className="grid lg:grid-cols-2 min-h-[700px]">
                 {/* Left: Manufacturing Video Background */}

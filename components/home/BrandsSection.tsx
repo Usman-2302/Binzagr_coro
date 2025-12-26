@@ -55,14 +55,16 @@ export function BrandsSection() {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image Container */}
-              <div className={`relative h-64 bg-gradient-to-br ${brand.color} p-6 flex items-center justify-center`}>
+              <div className={`relative h-64 bg-gradient-to-br ${brand.color} p-6 flex items-center justify-center overflow-hidden`}>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.3),transparent_60%)] pointer-events-none" />
                 <img
                   src={brand.image}
                   alt={brand.name}
-                  className="h-48 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
+                  className="h-48 w-auto object-contain group-hover:scale-110 transition-transform duration-500 brightness-105 contrast-105 saturate-110 drop-shadow-2xl"
                 />
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Content */}

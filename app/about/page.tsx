@@ -3,16 +3,31 @@
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Pause, Play } from "lucide-react";
 
 const missionImg = "/assets/images/mission.png";
 const aboutVideo = "/assets/videos/about_binzagr.mp4";
 
 export default function AboutPage() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPlaying, setIsPlaying] = useState(true);
+
+    const togglePlay = () => {
+        if (videoRef.current) {
+            if (isPlaying) {
+                videoRef.current.pause();
+            } else {
+                videoRef.current.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
+
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-48 pb-32 overflow-hidden bg-black">
+            <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-black">
                 <div className="absolute inset-0 z-0">
                     <img src="/assets/sources/1W7A0491-scaled.jpg" className="w-full h-full object-cover opacity-60" alt="Binzagr Heritage" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
@@ -70,10 +85,28 @@ export default function AboutPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="rounded-2xl overflow-hidden shadow-xl">
-                            <video controls className="w-full">
+                        <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-black">
+                            <video
+                                ref={videoRef}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover aspect-video"
+                            >
                                 <source src={aboutVideo} type="video/mp4" />
                             </video>
+
+                            {/* Video Controls Overlay */}
+                            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <button
+                                    onClick={togglePlay}
+                                    className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+                                    aria-label={isPlaying ? "Pause video" : "Play video"}
+                                >
+                                    {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8 ml-1" />}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,11 +115,25 @@ export default function AboutPage() {
             {/* Mission */}
             <Section className="bg-muted/30">
                 <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <img src={missionImg} alt="Mission" className="rounded-2xl shadow-xl" />
-                        <div>
-                            <SectionHeading title="Our Mission" align="left" />
-                            <p className="text-muted-foreground text-lg">To deliver premium quality beverages that refresh and delight our consumers while maintaining the highest standards of food safety, sustainability, and corporate responsibility.</p>
+                    <div className="grid lg:grid-cols-5 gap-16 items-center">
+                        <div className="lg:col-span-2">
+                            <div className="relative flex items-center justify-center">
+                                <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+                                <img
+                                    src={missionImg}
+                                    alt="Mission"
+                                    className="relative w-full max-w-[280px] h-auto object-contain animate-float drop-shadow-[0_30px_60px_rgba(0,0,0,0.12)]"
+                                />
+                            </div>
+                        </div>
+                        <div className="lg:col-span-3 space-y-6">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-2">
+                                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                                <span className="text-xs font-black uppercase tracking-widest">Our Commitment</span>
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight uppercase">Our <span className="text-primary italic">Mission</span></h2>
+                            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">To deliver premium quality beverages that refresh and delight our consumers while maintaining the highest standards of food safety, sustainability, and corporate responsibility.</p>
+                            <div className="h-1 w-24 bg-primary/30 rounded-full" />
                         </div>
                     </div>
                 </div>
@@ -120,16 +167,16 @@ function TimelineSection() {
     });
 
     return (
-        <section ref={containerRef} className="py-24 bg-white overflow-hidden">
+        <section ref={containerRef} className="py-20 md:py-32 bg-white overflow-hidden">
             <div className="container mx-auto px-4">
                 <SectionHeading title="Our Journey" subtitle="Decades of refreshing excellence" />
 
                 <div className="relative mt-20">
                     {/* Central Line */}
-                    <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-secondary/10 hidden md:block" />
+                    <div className="absolute left-[20px] md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-secondary/10" />
                     <motion.div
                         style={{ scaleY }}
-                        className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-primary origin-top hidden md:block"
+                        className="absolute left-[20px] md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-primary origin-top"
                     />
 
                     {/* Timeline Items */}
@@ -141,15 +188,15 @@ function TimelineSection() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
-                                className={`relative flex items-center justify-between md:justify-normal gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                                className={`relative flex items-center justify-start md:justify-normal gap-12 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                             >
                                 {/* Date Bubble */}
-                                <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center">
+                                <div className="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary border-4 border-white shadow-lg z-10 flex items-center justify-center">
                                     <div className="w-2 h-2 rounded-full bg-white" />
                                 </div>
 
                                 {/* Content Card */}
-                                <div className="w-full md:w-[45%]">
+                                <div className="w-full md:w-[45%] pl-12 md:pl-0">
                                     <div className="glass-card p-8 rounded-3xl relative overflow-hidden group">
                                         <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                                             <span className="text-6xl font-black">{item.year}</span>
