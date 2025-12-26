@@ -15,6 +15,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Brands", path: "/brands", hasMegaMenu: true },
   { name: "Logistics", path: "/distribution" },
+  { name: "Careers", path: "/careers" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -49,7 +50,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/95 backdrop-blur-xl shadow-lg py-3 border-b border-primary/5"
+          ? "bg-zinc-950/80 backdrop-blur-md shadow-lg py-3 border-b border-white/5"
           : "bg-transparent py-5"
       )}
     >
@@ -59,7 +60,10 @@ export function Header() {
           <img
             src={logo}
             alt="Binzagr Coro"
-            className="h-8 md:h-9 w-auto object-contain"
+            className={cn(
+              "h-8 md:h-9 w-auto object-contain transition-all duration-300",
+              isScrolled && "brightness-0 invert opacity-90"
+            )}
           />
         </Link>
 
@@ -79,8 +83,8 @@ export function Header() {
                   pathname === link.path
                     ? "text-primary"
                     : isScrolled
-                      ? "text-secondary"
-                      : ["/", "/about", "/brands", "/distribution", "/contact", "/terms", "/privacy"].includes(pathname)
+                      ? "text-white/90"
+                      : ["/", "/about", "/brands", "/distribution", "/contact", "/terms", "/privacy", "/careers"].includes(pathname)
                         ? "text-white"
                         : "text-secondary"
                 )}
@@ -135,7 +139,7 @@ export function Header() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={cn(
             "md:hidden relative z-50 p-2 transition-colors",
-            isMobileMenuOpen ? "text-white" : isScrolled ? "text-secondary hover:text-primary" : "text-white/90 hover:text-white"
+            isMobileMenuOpen ? "text-white" : "text-white/90 hover:text-white"
           )}
           aria-label="Toggle menu"
         >

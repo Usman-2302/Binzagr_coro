@@ -7,6 +7,8 @@ const quickLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Our Brands", path: "/brands" },
+  { name: "Logistics", path: "/distribution" },
+  { name: "Careers", path: "/careers" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -50,10 +52,10 @@ export function Footer() {
                 href="https://www.linkedin.com/company/binzagr-co-ro-ltd/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/40 hover:text-[#0077b5] transition-colors"
+                className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-[#0077b5] text-white transition-all duration-300 shadow-lg hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -97,20 +99,7 @@ export function Footer() {
 
           {/* Careers & Contact */}
           <div className="lg:col-span-1 space-y-10">
-            {/* Careers Widget */}
-            <div className="bg-zinc-900/50 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors group">
-              <h4 className="text-lg font-bold mb-2 text-white group-hover:text-primary transition-colors">Careers</h4>
-              <p className="text-white/60 text-xs mb-4">Looking for a job? Join our growing team.</p>
-              <a
-                href="https://www.linkedin.com/company/binzagr-co-ro-ltd/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-4 w-4" />
-                <span>Visit LinkedIn Page</span>
-              </a>
-            </div>
+
 
             {/* Contact Info */}
             <div>

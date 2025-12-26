@@ -1,0 +1,221 @@
+import { Metadata } from "next";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Section } from "@/components/ui/section";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { CheckCircle2, Factory, Globe2, Users2, BrainCircuit, ShieldCheck, ArrowRight, Linkedin } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Careers | Binzagr Coro",
+    description: "Join a legacy of manufacturing excellence. Explore career opportunities at Binzagr Coro, a Saudi-Danish joint venture committed to quality and innovation.",
+};
+
+const benefits = [
+    {
+        icon: Globe2,
+        title: "Global Heritage",
+        description: "A strategic Saudi-Danish joint venture combining local market leadership with international manufacturing standards.",
+    },
+    {
+        icon: Factory,
+        title: "Advanced Manufacturing",
+        description: "Work in one of the region's most sophisticated automated facilities, producing millions of units annually.",
+    },
+    {
+        icon: Users2,
+        title: "300+ Professionals",
+        description: "Join a diverse, highly-skilled workforce dedicated to operational excellence and safety.",
+    },
+    {
+        icon: BrainCircuit,
+        title: "Innovation Culture",
+        description: "Continuous investment in technology and process optimization to stay ahead of market demands.",
+    },
+    {
+        icon: ShieldCheck,
+        title: "Safety First",
+        description: "Uncompromising commitment to international health, safety, and quality standards (ISO/HACCP).",
+    },
+];
+
+export default function CareersPage() {
+    return (
+        <div className="min-h-screen">
+            {/* 1. Hero Section */}
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    {/* Using a factory/industrial image for authority */}
+                    <img
+                        src="/assets/sources/1760930665695.jpeg"
+                        alt="Binzagr Coro Facility"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/90 via-zinc-950/70 to-zinc-950/30" />
+                </div>
+
+                <div className="container relative z-10 px-4">
+                    <div className="max-w-3xl animate-fade-in-up">
+                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Careers at Binzagr Coro</span>
+                        <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+                            Build Your Career with <br /> <span className="text-primary">Manufacturing Excellence</span>
+                        </h1>
+                        <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
+                            Join a stable, high-performance environment where industrial precision meets professional growth. We are looking for dedicated talent to drive our legacy forward.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* 2. Why Work With Us */}
+            <Section className="bg-white py-24">
+                <div className="container mx-auto px-4">
+                    <SectionHeading
+                        title="Why Work With Us"
+                        subtitle="A Foundation of Stability and Growth"
+                        align="center"
+                        className="mb-16"
+                    />
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="bg-secondary/5 p-8 rounded-2xl border border-secondary/10 hover:border-primary/50 transition-colors group">
+                                <div className="h-14 w-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <benefit.icon className="h-7 w-7 text-primary" />
+                                </div>
+                                <h3 className="text-xl font-bold text-secondary mb-3">{benefit.title}</h3>
+                                <p className="text-secondary/70 leading-relaxed text-sm">
+                                    {benefit.description}
+                                </p>
+                            </div>
+                        ))}
+
+                        {/* 6th Card: Professional Development */}
+                        <div className="bg-primary p-8 rounded-2xl shadow-xl flex flex-col justify-between text-white group">
+                            <div>
+                                <div className="h-14 w-14 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm mb-6">
+                                    <CheckCircle2 className="h-7 w-7 text-white" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3">Professional Development</h3>
+                                <p className="text-white/80 text-sm leading-relaxed">
+                                    We invest in our people through structured training programs and clear career advancement pathways.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            {/* 3. Great Place to Work */}
+            <Section className="bg-zinc-50 border-y border-zinc-200 py-24">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        {/* Text Content */}
+                        <div className="lg:w-1/2 space-y-6">
+                            <h2 className="text-3xl md:text-4xl font-black text-secondary">
+                                Certified as a <span className="text-primary">Great Place to Work®</span>
+                            </h2>
+                            <p className="text-lg text-secondary/70 leading-relaxed">
+                                Our commitment to employee well-being, safety, and professional gratification has been recognized globally. We foster a culture of respect, collaboration, and integrity.
+                            </p>
+                            <ul className="space-y-4 pt-4">
+                                <li className="flex items-center gap-3 text-secondary font-medium">
+                                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                                    <span>Inclusive & Safe Work Environment</span>
+                                </li>
+                                <li className="flex items-center gap-3 text-secondary font-medium">
+                                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                                    <span>Recognition of High Performance</span>
+                                </li>
+                                <li className="flex items-center gap-3 text-secondary font-medium">
+                                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                                    <span>Community & Sustainability Initiatives</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Badge Visual */}
+                        <div className="lg:w-1/2 flex justify-center">
+                            <div className="relative">
+                                <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full transform scale-75" />
+                                <img
+                                    src="/assets/sources/Best-place-to-work-PNG-768x257.png"
+                                    alt="Great Place to Work Certification"
+                                    className="relative z-10 w-full max-w-md drop-shadow-2xl"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            {/* 4. Life at Binzagr - Visual Gallery */}
+            <Section className="py-24">
+                <div className="container mx-auto px-4">
+                    <SectionHeading
+                        title="Life at Binzagr Coro"
+                        subtitle="Our People. Our Strength."
+                        align="left"
+                        className="mb-12"
+                    />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-[600px] md:h-[500px]">
+                        {/* Large Main Item */}
+                        <div className="md:col-span-2 row-span-2 relative rounded-3xl overflow-hidden group shadow-lg">
+                            <img src="/assets/sources/1760930665698.jpeg" alt="Teamwork" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                            <div className="absolute bottom-0 left-0 p-8">
+                                <h4 className="text-white font-bold text-xl mb-1">Collaborative Environment</h4>
+                                <p className="text-white/70 text-sm">Working together to achieve excellence.</p>
+                            </div>
+                        </div>
+
+                        {/* Side Item 1 */}
+                        <div className="relative rounded-3xl overflow-hidden group shadow-lg">
+                            <img src="/assets/sources/1760930665983.jpeg" alt="Production Line" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                            <div className="absolute bottom-0 left-0 p-6">
+                                <h4 className="text-white font-bold text-lg mb-1">State-of-the-Art Facility</h4>
+                            </div>
+                        </div>
+
+                        {/* Side Item 2 */}
+                        <div className="relative rounded-3xl overflow-hidden group shadow-lg">
+                            <div className="absolute inset-0 bg-secondary flex items-center justify-center">
+                                {/* Placeholder for video or more abstract industrial shot if available */}
+                                <Factory className="h-16 w-16 text-white/20" />
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                            <div className="absolute bottom-0 left-0 p-6">
+                                <h4 className="text-white font-bold text-lg mb-1">Industrial Precision</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            {/* 5. CTA Section */}
+            <section className="py-20 bg-primary text-white text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/assets/images/pattern.png')] opacity-10" />
+                <div className="container mx-auto px-4 max-w-4xl relative z-10">
+                    <h2 className="text-3xl md:text-5xl font-black mb-6">Ready to Join Us?</h2>
+                    <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                        Explore our current openings and take the first step towards a rewarding career with a leading FMCG manufacturer.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Button asChild size="lg" className="rounded-full px-12 text-lg bg-white hover:bg-white/90 text-primary font-bold h-16 shadow-2xl">
+                            <Link href="https://www.linkedin.com/company/binzagr-co-ro-ltd/jobs/" target="_blank" rel="noopener noreferrer">
+                                <Linkedin className="mr-3 h-5 w-5" />
+                                View Open Positions
+                            </Link>
+                        </Button>
+
+                        <div className="text-white/80 text-sm font-medium">
+                            or email your CV to <a href="mailto:careers@binzagrcoro.com" className="text-white font-bold hover:underline">careers@binzagrcoro.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+}
