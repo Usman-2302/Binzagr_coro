@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Truck, MapPin, Globe } from "lucide-react";
 
 const cities = [
@@ -17,6 +18,21 @@ const connections = [
 ];
 
 export default function DistributionPage() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const galleryImages = [
+        "/assets/sources/unnamed.webp",
+        "/assets/sources/unnamed (1).webp",
+        "/assets/sources/unnamed (2).jpg"
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div className="min-h-screen bg-white">
             <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-secondary overflow-hidden">
@@ -160,11 +176,35 @@ export default function DistributionPage() {
                                 at every touchpoint from Riyadh to the edges of the Kingdom.
                             </p>
                         </div>
-                        <div className="relative group">
+                        <div className="relative group h-[500px]">
                             <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl h-[500px]">
-                                <img src="/assets/sources/Rectangle-9.png" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Warehouse Operations" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent" />
+                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl h-full w-full bg-secondary/5">
+                                <AnimatePresence mode="wait">
+                                    <motion.img
+                                        key={currentSlide}
+                                        src={galleryImages[currentSlide]}
+                                        initial={{ opacity: 0, scale: 1.1 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.7 }}
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                        alt="Warehouse Infrastructure"
+                                    />
+                                </AnimatePresence>
+                                <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent z-10" />
+
+                                {/* Slider Indicators */}
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                    {galleryImages.map((_, idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={() => setCurrentSlide(idx)}
+                                            className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSlide === idx ? "bg-primary w-6" : "bg-white/50 hover:bg-white"
+                                                }`}
+                                            aria-label={`Go to slide ${idx + 1}`}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
