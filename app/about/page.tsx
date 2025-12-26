@@ -2,6 +2,8 @@
 
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { useRef } from "react";
 
 const missionImg = "/assets/images/mission.png";
 const aboutVideo = "/assets/videos/about_binzagr.mp4";
@@ -50,6 +52,79 @@ export default function AboutPage() {
                     </div>
                 </div>
             </Section>
+
+            {/* Vertical Timeline */}
+            <TimelineSection />
         </>
+    );
+}
+
+const timelineData = [
+    { year: "1976", title: "The Beginning", desc: "Joint venture established between Binzagr Company and CO-RO A/S." },
+    { year: "1985", title: "Production Milestone", desc: "Our Jeddah facility reaches peak production capacity for Suntop." },
+    { year: "2000", title: "Market Expansion", desc: "Expanded distribution to cover 100% of the Saudi market." },
+    { year: "2015", title: "Modernization", desc: "Complete upgrade of manufacturing lines with European technology." },
+    { year: "2023", title: "Vision 2030", desc: "Launch of new sustainability initiatives and packaging designs." },
+];
+
+function TimelineSection() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start center", "end center"],
+    });
+
+    const scaleY = useSpring(scrollYProgress, {
+        stately: 100,
+        damping: 30,
+        restDelta: 0.001,
+    });
+
+    return (
+        <section ref={containerRef} className="py-24 bg-white overflow-hidden">
+            <div className="container mx-auto px-4">
+                <SectionHeading title="Our Journey" subtitle="Decades of refreshing excellence" />
+
+                <div className="relative mt-20">
+                    {/* Central Line */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-secondary/10 hidden md:block" />
+                    <motion.div
+                        style={{ scaleY }}
+                        className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-primary origin-top hidden md:block"
+                    />
+
+                    {/* Timeline Items */}
+                    <div className="space-y-24">
+                        {timelineData.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className={`relative flex items-center justify-between md:justify-normal gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                            >
+                                {/* Date Bubble */}
+                                <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center">
+                                    <div className="w-2 h-2 rounded-full bg-white" />
+                                </div>
+
+                                {/* Content Card */}
+                                <div className="w-full md:w-[45%]">
+                                    <div className="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                                        <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                            <span className="text-6xl font-black">{item.year}</span>
+                                        </div>
+                                        <span className="text-primary font-black text-2xl mb-2 block">{item.year}</span>
+                                        <h3 className="text-xl font-bold text-secondary mb-3">{item.title}</h3>
+                                        <p className="text-muted-foreground">{item.desc}</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }
