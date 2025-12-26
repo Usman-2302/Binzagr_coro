@@ -8,7 +8,7 @@ const logoIcon = "/assets/images/logo-icon.png";
 
 export function AboutSection() {
   return (
-    <Section className="bg-muted/30">
+    <Section className="bg-muted/30 pb-10 md:pb-10">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -41,26 +41,51 @@ export function AboutSection() {
 
           {/* Visual Element */}
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden aspect-square flex items-center justify-center shadow-2xl">
+            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] md:aspect-square flex items-center justify-center shadow-2xl group">
               <img
                 src="/assets/sources/1W7A0711-scaled.jpg"
-                alt="Binzagr Manufacturing"
-                className="w-full h-full object-cover"
+                alt="Binzagr Legacy"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="w-12 h-1 bg-primary mb-4" />
-                <h4 className="text-white font-black text-xl italic leading-tight">Jeddah <br /> Manufacturing Hub</h4>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            </div>
+
+            {/* Experience Badge */}
+            <div className="absolute -top-6 right-4 md:-top-10 md:right-10 z-30 animate-fade-in-up delay-300">
+              <div className="bg-white p-4 md:p-6 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center text-center border border-black/5 hover:scale-105 transition-transform duration-500">
+                <span className="text-4xl md:text-5xl font-black text-primary tracking-tighter">45+</span>
+                <span className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-widest mt-1">Years of<br />Excellence</span>
               </div>
             </div>
-            {/* Stats */}
-            <div className="absolute -bottom-6 -left-6 bg-background rounded-2xl shadow-lg p-6">
-              <p className="text-4xl font-bold text-primary">45+</p>
-              <p className="text-muted-foreground text-sm">Years of Excellence</p>
-            </div>
-            <div className="absolute -top-6 -right-6 bg-background rounded-2xl shadow-lg p-6">
-              <p className="text-4xl font-bold text-accent">300+</p>
-              <p className="text-muted-foreground text-sm">Team Members</p>
+            {/* Floating Products & Character Overlay */}
+            <div className="absolute bottom-4 left-0 right-0 flex items-end justify-start px-8">
+              <div className="flex items-end -space-x-4 transform translate-y-2 hover:translate-y-0 transition-transform duration-500">
+                {/* Products */}
+                <img
+                  src="/assets/sources/1-81.png"
+                  alt="Suntop Purple"
+                  className="w-16 md:w-20 h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] hover:scale-110 hover:-translate-y-4 hover:-rotate-6 transition-all duration-300 z-10"
+                />
+                <img
+                  src="/assets/sources/2-51.png"
+                  alt="Suntop Pink"
+                  className="w-20 md:w-24 h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] z-20 -mb-1 hover:scale-110 hover:-translate-y-6 transition-all duration-300"
+                />
+                <img
+                  src="/assets/sources/3-31.png"
+                  alt="Suntop Green"
+                  className="w-16 md:w-20 h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] hover:scale-110 hover:-translate-y-4 hover:rotate-6 transition-all duration-300 z-10"
+                />
+              </div>
+
+              {/* Mascot */}
+              <div className="relative -ml-4 z-30 mb-0">
+                <img
+                  src="/assets/sources/4-1.png"
+                  alt="Mascot"
+                  className="w-28 md:w-36 h-auto object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)] animate-pulse-slow hover:scale-110 hover:rotate-3 transition-transform duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>

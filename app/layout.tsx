@@ -16,8 +16,11 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Lovable App",
-  description: "Lovable Generated Project",
+  title: "Binzagr Coro Legacy",
+  description: "Manufacturing Excellence in Saudi Arabia - Since 1976",
+  icons: {
+    icon: "/assets/sources/cropped-Frame-3-1-192x192.png",
+  },
 };
 
 export default function RootLayout({

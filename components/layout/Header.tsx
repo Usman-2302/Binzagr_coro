@@ -101,7 +101,7 @@ export function Header() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 w-[450px] bg-white/95 backdrop-blur-xl rounded-[2rem] p-8 mt-4 grid grid-cols-3 gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/20"
+                    className="absolute top-full left-1/2 -translate-x-1/2 w-[550px] bg-white rounded-[2rem] p-8 mt-6 grid grid-cols-3 gap-6 shadow-[0_30px_80px_rgba(0,0,0,0.15)] border-t-4 border-t-primary border-x border-b border-gray-100"
                   >
                     {brandsMenuData.map((brand) => (
                       <Link
@@ -133,7 +133,10 @@ export function Header() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden relative z-50 p-2 text-white/90 hover:text-white transition-colors"
+          className={cn(
+            "md:hidden relative z-50 p-2 transition-colors",
+            isMobileMenuOpen ? "text-white" : isScrolled ? "text-secondary hover:text-primary" : "text-white/90 hover:text-white"
+          )}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
@@ -146,7 +149,7 @@ export function Header() {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "fixed inset-0 bg-background/98 backdrop-blur-md md:hidden transition-all duration-300",
+            "fixed inset-0 bg-zinc-950 backdrop-blur-xl md:hidden transition-all duration-300 z-40",
             isMobileMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
@@ -157,18 +160,19 @@ export function Header() {
               <Link
                 key={link.path}
                 href={link.path}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={cn(
                   "text-3xl font-black uppercase tracking-tight transition-colors py-2",
                   pathname === link.path
                     ? "text-primary"
-                    : "text-secondary hover:text-primary"
+                    : "text-white/80 hover:text-primary"
                 )}
               >
                 {link.name}
               </Link>
             ))}
-            <Button asChild size="lg" className="bg-gradient-primary mt-4">
-              <Link href="/contact">Get in Touch</Link>
+            <Button asChild size="lg" className="bg-gradient-primary mt-4 rounded-full px-8 text-lg">
+              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Get in Touch</Link>
             </Button>
           </nav>
         </div>
