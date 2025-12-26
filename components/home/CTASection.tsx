@@ -26,7 +26,7 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-6 group"
+              className="bg-gradient-primary text-white hover:opacity-90 transition-all duration-300 text-lg px-10 py-6 group shadow-orange hover:shadow-lg hover:-translate-y-1"
             >
               <Link href="/contact">
                 Get in Touch

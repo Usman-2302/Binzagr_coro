@@ -23,15 +23,16 @@ export function ManufacturingSection() {
                         >
                             <source src="/assets/videos/about_binzagr.mp4" type="video/mp4" />
                         </video>
-                        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/60 to-transparent opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-transparent opacity-90" />
                         <div className="absolute inset-0 bg-black/20" />
                     </motion.div>
 
                     <div className="relative h-full flex flex-col justify-end p-12 md:p-20 z-10">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
                             className="space-y-4"
                         >
                             <div className="w-16 h-1.5 bg-primary mb-6" />
@@ -82,15 +83,15 @@ export function ManufacturingSection() {
                                     desc: "High-velocity manufacturing delivering millions of refreshing moments daily."
                                 }
                             ].map((item, index) => (
-                                <div key={index} className="flex gap-6 group">
-                                    <div className="shrink-0 w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/30 transition-all duration-300">
+                                <div key={index} className="flex gap-6 group p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                    <div className="shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                         {item.icon}
                                     </div>
                                     <div className="space-y-1">
                                         <h3 className="text-xl font-bold text-white flex items-center gap-2">
                                             {item.title}
                                         </h3>
-                                        <p className="text-white/70 leading-relaxed">
+                                        <p className="text-white/70 leading-relaxed text-sm">
                                             {item.desc}
                                         </p>
                                     </div>
@@ -106,8 +107,8 @@ export function ManufacturingSection() {
                                         "/assets/sources/1W7A0491-scaled.jpg",
                                         "/assets/sources/shutterstock_479487457-scaled.jpg"
                                     ].map((src, i) => (
-                                        <div key={i} className="relative w-12 h-12 rounded-full border-2 border-neutral-950 overflow-hidden bg-neutral-800">
-                                            <img src={src} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" alt="Manufacturing Detail" />
+                                        <div key={i} className="relative w-12 h-12 rounded-full border-2 border-neutral-950 overflow-hidden bg-neutral-800 hover:scale-125 hover:z-20 transition-all duration-300">
+                                            <img src={src} className="w-full h-full object-cover" alt="Manufacturing Detail" />
                                         </div>
                                     ))}
                                 </div>

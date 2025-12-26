@@ -49,7 +49,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md py-3"
+          ? "bg-background/95 backdrop-blur-xl shadow-lg py-3 border-b border-primary/5"
           : "bg-transparent py-5"
       )}
     >
@@ -80,7 +80,7 @@ export function Header() {
                     ? "text-primary"
                     : isScrolled
                       ? "text-secondary"
-                      : ["/", "/about", "/brands", "/distribution", "/contact"].includes(pathname)
+                      : ["/", "/about", "/brands", "/distribution", "/contact", "/terms", "/privacy"].includes(pathname)
                         ? "text-white"
                         : "text-secondary"
                 )}
@@ -133,13 +133,13 @@ export function Header() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden relative z-10 p-2"
+          className="md:hidden relative z-50 p-2 text-white/90 hover:text-white transition-colors"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6 text-secondary" />
+            <X className="h-8 w-8 drop-shadow-md" />
           ) : (
-            <Menu className="h-6 w-6 text-secondary" />
+            <Menu className="h-8 w-8 drop-shadow-md" />
           )}
         </button>
 
@@ -158,7 +158,7 @@ export function Header() {
                 key={link.path}
                 href={link.path}
                 className={cn(
-                  "text-2xl font-semibold transition-colors",
+                  "text-3xl font-black uppercase tracking-tight transition-colors py-2",
                   pathname === link.path
                     ? "text-primary"
                     : "text-secondary hover:text-primary"

@@ -25,7 +25,7 @@ export function TrustTicker() {
                         <img
                             src={gptwLogo}
                             alt="Great Place to Work certified"
-                            className="h-16 md:h-24 w-auto object-contain hover:scale-105 transition-transform duration-500"
+                            className="h-20 md:h-28 w-auto object-contain hover:scale-105 transition-transform duration-500 drop-shadow-sm"
                         />
                         <div className="h-px w-24 bg-primary/20" />
                     </motion.div>

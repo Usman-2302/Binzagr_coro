@@ -39,7 +39,7 @@ export default function BrandsPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                     >
-                        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-tight">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 uppercase tracking-tight animate-fade-up">
                             Our <span className="text-primary italic">Portfolio</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-medium">
@@ -57,7 +57,7 @@ export default function BrandsPage() {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                className={`p-10 glass-card rounded-[3rem] ${i % 2 === 1 ? "lg:order-2" : ""}`}
+                                className={`p-10 glass-card rounded-[3rem] ${i % 2 === 1 ? "lg:order-2" : ""} animate-fade-up group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500`}
                             >
                                 <motion.h4
                                     initial={{ opacity: 0, y: 10 }}
