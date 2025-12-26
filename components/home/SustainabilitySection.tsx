@@ -3,7 +3,7 @@ import { Leaf, Recycle, Globe } from "lucide-react";
 
 export function SustainabilitySection() {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-emerald-50/40 overflow-hidden relative border-y border-secondary/5">
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Side: Imagery */}
@@ -15,8 +15,8 @@ export function SustainabilitySection() {
                         className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&q=80&w=1200"
-                            alt="Sustainability Nature"
+                            src="/assets/sources/shutterstock_479487457-scaled.jpg"
+                            alt="Binzagr Coro Sustainability"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-secondary/20" />

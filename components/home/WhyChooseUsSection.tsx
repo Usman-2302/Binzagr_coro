@@ -4,34 +4,34 @@ import { Shield, Leaf, Award, Heart, Globe, Sparkles } from "lucide-react";
 
 const features = [
   {
-    icon: Shield,
-    title: "ISO 22000 Certified",
-    description: "Adhering to the highest international food safety standards.",
-  },
-  {
-    icon: Leaf,
-    title: "Quality Ingredients",
-    description: "Using only the finest, carefully selected ingredients in all products.",
-  },
-  {
-    icon: Award,
-    title: "Great Place to Work",
-    description: "Recognized for our exceptional workplace culture and employee satisfaction.",
-  },
-  {
     icon: Heart,
-    title: "Trusted by Families",
-    description: "Generations of Saudi families have made our brands part of their daily lives.",
-  },
-  {
-    icon: Globe,
-    title: "Danish Partnership",
-    description: "Leveraging CO-RO's global expertise in beverage production.",
+    title: "Heritage of Trust",
+    description: "A cultural staple in Saudi households since 1976, built on decades of consistency.",
   },
   {
     icon: Sparkles,
-    title: "Innovation Driven",
-    description: "Continuously developing new flavors and products for evolving tastes.",
+    title: "Innovative Spirit",
+    description: "Continuously evolving our portfolio to match modern lifestyles and preferences.",
+  },
+  {
+    icon: Award,
+    title: "Culture of Excellence",
+    description: "Certified by Great Place to Work® for our commitment to people and development.",
+  },
+  {
+    icon: Globe,
+    title: "Global Partnership",
+    description: "Synthesizing Binzagr's local market depth with Co-Ro's international standards.",
+  },
+  {
+    icon: Shield,
+    title: "Quality Promise",
+    description: "Unwavering commitment to safety and freshness in every drop we produce.",
+  },
+  {
+    icon: Leaf,
+    title: "Community Growth",
+    description: "Driving localized economic impact and sustainable practices for the next generation.",
   },
 ];
 
@@ -40,8 +40,8 @@ export function WhyChooseUsSection() {
     <Section className="bg-muted/30">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="Why Choose Binzagr Coro"
-          subtitle="What sets us apart in delivering refreshing experiences"
+          title="The Coro Difference"
+          subtitle="Beyond manufacturing, we represent a legacy of quality and shared values."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

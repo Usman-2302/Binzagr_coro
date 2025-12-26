@@ -9,18 +9,43 @@ const suncolaImg = "/assets/images/suncola.png";
 const sunquickImg = "/assets/images/sunquick.png";
 
 const brands = [
-    { id: "suntop", name: "Suntop", tagline: "Pure Fruit Goodness", description: "Delicious fruit juices made from the finest ingredients, loved by children and adults alike. Available in multiple refreshing flavors.", image: suntopImg, link: "https://suntop.com.sa", color: "from-orange-400 to-yellow-400" },
-    { id: "suncola", name: "Suncola", tagline: "Refreshingly Different", description: "A unique cola experience crafted specifically for the Saudi Arabian palate. The perfect blend of taste and refreshment.", image: suncolaImg, link: "https://suncola.com.sa", color: "from-red-500 to-orange-500" },
-    { id: "sunquick", name: "Sunquick", tagline: "Concentrated Flavor", description: "Premium fruit concentrates that bring families together for moments of pure refreshment. Just add water for delicious drinks.", image: sunquickImg, link: "https://sunquick.com", color: "from-yellow-400 to-orange-400" },
+    { id: "suntop", name: "Suntop", category: "Fruit Juice & Drinks", tagline: "Pure Fruit Goodness", description: "Delicious fruit juices made from the finest ingredients, loved by children and adults alike. Available in multiple refreshing flavors.", image: suntopImg, link: "https://suntop.com.sa", color: "from-orange-400 to-yellow-400" },
+    { id: "suncola", name: "Suncola", category: "Carbonated Beverage", tagline: "Refreshingly Different", description: "A unique cola experience crafted specifically for the Saudi Arabian palate. The perfect blend of taste and refreshment.", image: suncolaImg, link: "https://suncola.com.sa", color: "from-red-500 to-orange-500" },
+    { id: "sunquick", name: "Sunquick", category: "Fruit Concentrate", tagline: "Concentrated Flavor", description: "Premium fruit concentrates that bring families together for moments of pure refreshment. Just add water for delicious drinks.", image: sunquickImg, link: "https://sunquick.com", color: "from-yellow-400 to-orange-400" },
 ];
 
 export default function BrandsPage() {
     return (
         <>
-            <section className="pt-32 pb-16 bg-gradient-dark">
-                <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6">Our Brands</h1>
-                    <p className="text-xl text-primary-foreground/70 max-w-2xl mx-auto">Discover our portfolio of refreshing beverages loved across Saudi Arabia</p>
+            <section className="relative pt-48 pb-32 overflow-hidden bg-black">
+                {/* Background Image with Parallax-esque effect */}
+                <motion.div
+                    initial={{ scale: 1.1, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    className="absolute inset-0 z-0"
+                >
+                    <img
+                        src="/assets/sources/binzagr_co_ro_ltd_cover.jpeg"
+                        alt="Binzagr Co-Ro Portfolio"
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90" />
+                </motion.div>
+
+                <div className="container mx-auto px-4 text-center relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    >
+                        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-tight">
+                            Our <span className="text-primary italic">Portfolio</span>
+                        </h1>
+                        <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-medium">
+                            Discover the iconic brands trusted by millions across the Kingdom for nearly five decades.
+                        </p>
+                    </motion.div>
                 </div>
             </section>
 
@@ -38,9 +63,9 @@ export default function BrandsPage() {
                                     initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    className="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+                                    className="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4"
                                 >
-                                    Featured Brand
+                                    {brand.category}
                                 </motion.h4>
                                 <h2 className="text-5xl font-black mb-4 text-secondary">{brand.name}</h2>
                                 <p className="text-primary text-2xl font-black mb-6 italic">"{brand.tagline}"</p>
@@ -79,8 +104,8 @@ function BrandImage({ brand }: { brand: any }) {
     const mouseXSpring = useSpring(x);
     const mouseYSpring = useSpring(y);
 
-    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["20deg", "-20deg"]);
-    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-20deg", "20deg"]);
+    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
+    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();

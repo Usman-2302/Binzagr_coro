@@ -12,10 +12,36 @@ export default function AboutPage() {
     return (
         <>
             {/* Hero */}
-            <section className="pt-32 pb-16 bg-gradient-dark">
-                <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6">About Us</h1>
-                    <p className="text-xl text-primary-foreground/70 max-w-2xl mx-auto">A legacy of quality, trust, and refreshing moments since 1976</p>
+            <section className="relative pt-48 pb-32 overflow-hidden bg-black">
+                <div className="absolute inset-0 z-0">
+                    <img src="/assets/sources/1W7A0491-scaled.jpg" className="w-full h-full object-cover opacity-60" alt="Binzagr Heritage" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
+                </div>
+                <div className="container mx-auto px-4 text-center relative z-10">
+                    <motion.h4
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-6"
+                    >
+                        Established 1976
+                    </motion.h4>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-4xl md:text-7xl font-black text-white mb-8"
+                    >
+                        Quality Beyond <br /> <span className="text-gradient">Boundaries</span>
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
+                    >
+                        A powerful partnership between Saudi excellence and Danish innovation,
+                        refreshing millions of families for nearly five decades.
+                    </motion.p>
                 </div>
             </section>
 
@@ -23,12 +49,25 @@ export default function AboutPage() {
             <Section>
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <SectionHeading title="Our Story" align="left" />
-                            <div className="space-y-4 text-muted-foreground">
-                                <p>Binzagr Coro is a successful joint venture established in 1976 between Binzagr Company, one of Saudi Arabia's oldest business houses, and CO-RO A/S, a Danish leader in beverage production.</p>
-                                <p>For over 45 years, we have been dedicated to producing high-quality fruit juices and beverages that bring joy to millions of families across the Kingdom.</p>
-                                <p>Our state-of-the-art manufacturing facility in Jeddah produces some of Saudi Arabia's most beloved beverage brands including Suntop, Suncola, and Sunquick.</p>
+                        <div className="space-y-8">
+                            <div className="w-20 h-1.5 bg-primary" />
+                            <SectionHeading title="The Joint Venture" align="left" />
+                            <div className="space-y-6 text-xl text-muted-foreground leading-relaxed italic border-l-4 border-primary/20 pl-8">
+                                <p>
+                                    Established in 1976, Binzagr Coro represents a strategic union between <strong>Binzagr Company</strong>—one of Saudi Arabia's most prestigious business houses—and <strong>CO-RO A/S</strong>, a Danish leader in beverage production.
+                                </p>
+                            </div>
+                            <div className="grid gap-4 pt-4">
+                                {[
+                                    "Transfer of international production standards to Saudi Arabia.",
+                                    "Unmatched distribution velocity across the Kingdom.",
+                                    "Home to beloved brands: Suntop, Suncola, and Sunquick."
+                                ].map((point, i) => (
+                                    <div key={i} className="flex items-center gap-3 font-bold text-secondary">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                        {point}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                         <div className="rounded-2xl overflow-hidden shadow-xl">

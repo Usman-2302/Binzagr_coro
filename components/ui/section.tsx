@@ -16,7 +16,7 @@ export function Section({ children, className, id, animate = true }: SectionProp
       ref={ref}
       id={id}
       className={cn(
-        "py-16 md:py-24",
+        "py-32 md:py-48",
         animate && "opacity-0",
         animate && isInView && "animate-fade-up",
         className

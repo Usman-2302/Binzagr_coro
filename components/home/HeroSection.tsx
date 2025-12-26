@@ -7,7 +7,7 @@ const introVideo = "/assets/videos/intro.mp4";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Video Background with Ken Burns Effect */}
       <motion.div
         initial={{ scale: 1 }}
@@ -31,8 +31,9 @@ export function HeroSection() {
         </video>
       </motion.div>
 
-      {/* Deep Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
+      {/* Deep Gradient Overlay - Guaranteed Readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
       {/* Orange Glow Effect */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/30 blur-[150px] rounded-full" />
@@ -74,10 +75,10 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6"
+              className="border-primary text-white hover:bg-primary transition-all duration-500 text-lg px-8 py-6 group rounded-full bg-black/50 backdrop-blur-md shadow-lg"
             >
-              <Link href="/about">
-                <Play className="mr-2 h-5 w-5" />
+              <Link href="/about" className="flex items-center">
+                <Play className="mr-3 h-4 w-4 fill-current group-hover:scale-110 transition-transform" />
                 Our Story
               </Link>
             </Button>
@@ -85,10 +86,15 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-1">
-          <div className="w-1.5 h-3 bg-primary rounded-full animate-pulse" />
+      {/* Innovative Scroll Indicator */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 group cursor-pointer z-20">
+        <span className="text-[8px] font-black uppercase tracking-[0.5em] text-white/50 group-hover:text-primary transition-colors">Scroll</span>
+        <div className="w-px h-10 bg-gradient-to-b from-primary to-transparent relative overflow-hidden">
+          <motion.div
+            animate={{ y: ["-100%", "100%"] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-0 w-full h-full bg-white/60"
+          />
         </div>
       </div>
     </section>

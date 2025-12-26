@@ -3,6 +3,7 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustTicker } from "@/components/home/TrustTicker";
 import { SustainabilitySection } from "@/components/home/SustainabilitySection";
+import { ManufacturingSection } from "@/components/home/ManufacturingSection";
 import { StatsSection } from "@/components/home/StatsSection";
 import {
   AboutSection,
@@ -18,6 +19,7 @@ export default function HomePage() {
       <TrustTicker />
       <AboutSection />
       <BrandsSection />
+      <ManufacturingSection />
       <StatsSection />
       <SustainabilitySection />
       <WhyChooseUsSection />

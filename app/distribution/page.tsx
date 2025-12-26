@@ -16,32 +16,27 @@ const connections = [
 
 export default function DistributionPage() {
     return (
-        <div className="pt-24 min-h-screen bg-white">
-            <section className="py-20 bg-secondary text-primary-foreground">
-                <div className="container mx-auto px-4 text-center">
-                    <motion.h4
-                        initial={{ opacity: 0, y: 20 }}
+        <div className="min-h-screen bg-white">
+            <section className="relative py-48 bg-secondary overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <img src="/assets/sources/Rectangle-13.png" className="w-full h-full object-cover opacity-60" alt="Logistics Center" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-secondary/80 via-secondary/40 to-secondary/90" />
+                </div>
+                <div className="container mx-auto px-4 text-center relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+                        transition={{ duration: 0.8 }}
                     >
-                        Logistics Excellence
-                    </motion.h4>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-6xl font-black mb-6"
-                    >
-                        Nationwide <span className="text-gradient">Reach</span>
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        className="text-xl text-primary-foreground/60 max-w-2xl mx-auto"
-                    >
-                        Our sophisticated distribution network ensures that refreshing moments are always within reach, across every corner of the Kingdom.
-                    </motion.p>
+                        <h4 className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-6">Logistics Excellence</h4>
+                        <h1 className="text-5xl md:text-7xl font-black text-white mb-8 uppercase tracking-tight">
+                            Nationwide <span className="text-primary italic">Reach</span>
+                        </h1>
+                        <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-medium leading-relaxed">
+                            Operating a sophisticated logistics network that spans the Kingdom,
+                            ensuring industrial-grade efficiency from facility to retail.
+                        </p>
+                    </motion.div>
                 </div>
             </section>
 
@@ -137,13 +132,35 @@ export default function DistributionPage() {
                                             x={city.x}
                                             y={city.y + 25}
                                             textAnchor="middle"
-                                            className="fill-secondary font-bold text-sm"
+                                            className="fill-secondary font-black text-xs uppercase tracking-tighter"
                                         >
                                             {city.name}
                                         </text>
                                     </g>
                                 ))}
                             </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="py-32 bg-muted/30">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+                        <div className="space-y-8">
+                            <div className="w-16 h-1.5 bg-primary" />
+                            <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight uppercase">Strategic <br /><span className="text-primary italic">Infrastructure</span></h2>
+                            <p className="text-xl text-muted-foreground leading-relaxed">
+                                Our logistics ecosystem is built on precision. With multi-temperature storage facilities
+                                and a fleet of over 500 specialized vehicles, we maintain the integrity of our brands
+                                at every touchpoint from Riyadh to the edges of the Kingdom.
+                            </p>
+                        </div>
+                        <div className="relative group">
+                            <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl h-[500px]">
+                                <img src="/assets/sources/Rectangle-9.png" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Warehouse Operations" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent" />
+                            </div>
                         </div>
                     </div>
                 </div>

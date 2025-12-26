@@ -36,11 +36,18 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div className="space-y-6">
-            <img src={logo} alt="Binzagr Coro" className="h-10 w-auto brightness-0 invert" />
-            <p className="text-secondary-foreground/70 text-sm leading-relaxed">
-              A joint venture between Binzagr Company and CO-RO A/S, bringing refreshing beverages to Saudi Arabia since 1976.
-            </p>
+          <div className="lg:col-span-2 space-y-8">
+            <img src={logo} alt="Binzagr Coro" className="h-8 w-auto brightness-0 invert opacity-90" />
+            <div className="space-y-4">
+              <h4 className="text-white font-bold text-sm tracking-widest uppercase italic">A Legacy of Collaboration</h4>
+              <p className="text-secondary-foreground/60 text-sm leading-relaxed max-w-md">
+                Established in 1976, Binzagr Coro is a strategic joint venture between Binzagr Company and CO-RO A/S,
+                dedicated to delivering world-class beverage standards to the Kingdom of Saudi Arabia.
+              </p>
+            </div>
+            <div className="flex items-center gap-4 pt-4 grayscale opacity-60">
+              <img src="/assets/sources/Best-place-to-work-PNG-768x257.png" className="h-10 w-auto" alt="GPTW" />
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -78,30 +85,30 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-primary">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-secondary-foreground/70 text-sm">
-                  Al Mahjar, Jeddah<br />
-                  Saudi Arabia
+          <div className="lg:col-span-1">
+            <h4 className="text-lg font-bold mb-8 text-white">Contact Terminal</h4>
+            <ul className="space-y-5">
+              <li className="flex items-start gap-4">
+                <MapPin className="h-5 w-5 text-primary shrink-0 mt-1" />
+                <span className="text-secondary-foreground/60 text-sm leading-relaxed">
+                  Al Mahjar, Industrial Area South<br />
+                  Jeddah 21411, Saudi Arabia
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-4">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
                 <a
                   href="tel:+966126369626"
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
+                  className="text-secondary-foreground/60 hover:text-white transition-colors text-sm font-medium"
                 >
                   +966 12 636 9626
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-4">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
                 <a
                   href="mailto:info@binzagrcoro.com"
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
+                  className="text-secondary-foreground/60 hover:text-white transition-colors text-sm font-medium"
                 >
                   info@binzagrcoro.com
                 </a>

@@ -9,13 +9,30 @@ const certifications = [
     "VISION 2030 ALIGNED"
 ];
 
+const gptwLogo = "/assets/sources/Best-place-to-work-PNG-768x257.png";
+
 export function TrustTicker() {
     return (
-        <div className="bg-secondary/5 border-y border-secondary/10 py-6 overflow-hidden">
-            <div className="container mx-auto px-4 mb-4">
-                <p className="text-center text-xs font-bold uppercase tracking-widest text-muted-foreground/60">
-                    Global Standards & Local Trust
-                </p>
+        <div className="bg-white border-y border-secondary/5 py-12 overflow-hidden select-none">
+            <div className="container mx-auto px-4 mb-10">
+                <div className="flex flex-col items-center gap-6">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="flex flex-col items-center gap-4"
+                    >
+                        <img
+                            src={gptwLogo}
+                            alt="Great Place to Work certified"
+                            className="h-16 md:h-24 w-auto object-contain hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="h-px w-24 bg-primary/20" />
+                    </motion.div>
+                    <p className="text-center text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-secondary/60">
+                        Global Standards & Industrial Excellence
+                    </p>
+                </div>
             </div>
             <div className="relative flex overflow-x-hidden">
                 <motion.div
@@ -30,9 +47,9 @@ export function TrustTicker() {
                     {[...certifications, ...certifications].map((cert, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-4 mx-8 text-xl md:text-2xl font-black text-secondary/20 grayscale hover:grayscale-0 transition-all cursor-default"
+                            className="flex items-center gap-4 mx-8 text-lg md:text-xl font-black text-secondary/40 uppercase tracking-widest grayscale transition-all duration-700 hover:text-primary hover:grayscale-0"
                         >
-                            <div className="w-2 h-2 rounded-full bg-primary/40" />
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
                             {cert}
                         </div>
                     ))}

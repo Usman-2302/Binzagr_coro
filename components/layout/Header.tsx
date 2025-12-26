@@ -59,7 +59,7 @@ export function Header() {
           <img
             src={logo}
             alt="Binzagr Coro"
-            className="h-10 md:h-12 w-auto object-contain"
+            className="h-8 md:h-9 w-auto object-contain"
           />
         </Link>
 
@@ -75,12 +75,14 @@ export function Header() {
               <Link
                 href={link.path}
                 className={cn(
-                  "relative flex items-center gap-1 text-sm font-bold uppercase tracking-widest transition-colors hover:text-primary",
+                  "relative flex items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.15em] transition-all duration-300 hover:text-primary",
                   pathname === link.path
                     ? "text-primary"
                     : isScrolled
                       ? "text-secondary"
-                      : "text-secondary"
+                      : ["/", "/about", "/brands", "/distribution", "/contact"].includes(pathname)
+                        ? "text-white"
+                        : "text-secondary"
                 )}
               >
                 {link.name}

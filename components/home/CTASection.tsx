@@ -36,8 +36,7 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6"
+              className="hover:bg-primary text-white bg-neutral-800 transition-all duration-500 text-lg px-10 py-6 rounded-full font-bold shadow-2xl"
             >
               <Link href="/about">Learn More About Us</Link>
             </Button>

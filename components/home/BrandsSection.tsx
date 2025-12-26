@@ -40,18 +40,18 @@ const brands = [
 
 export function BrandsSection() {
   return (
-    <Section>
+    <Section className="bg-neutral-50/80">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="Our Iconic Brands"
-          subtitle="Discover the refreshing beverages that have been delighting Saudi families for generations"
+          title="FMCG Leadership"
+          subtitle="Discover the iconic beverage portfolio trusted by millions across the Kingdom for nearly five decades."
         />
 
         <div className="grid md:grid-cols-3 gap-8">
           {brands.map((brand, index) => (
             <div
               key={brand.id}
-              className="group relative bg-card rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700 border border-secondary/5"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image Container */}

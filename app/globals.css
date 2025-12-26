@@ -11,6 +11,15 @@
    White:     #FFFFFF          - HSL: 0 0% 100%
 */
 
+:root {
+  --e-global-color-primary: #F26F21;
+  --e-global-color-secondary: #000000;
+  --e-global-color-text: #7A7A7A;
+  --e-global-color-accent: #0DA14E;
+  --e-global-color-white: #FFFFFF;
+  --e-global-color-yellow: #FDB815;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
