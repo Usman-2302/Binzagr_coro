@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/500.css";
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
-import "@fontsource/merriweather/400.css";
-import "@fontsource/merriweather/700.css";
-import "@fontsource/merriweather/900.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-
 import "./globals.css";
+import { rnsSans } from "@/lib/fonts";
 import { AppProviders } from "@/components/AppProviders";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -29,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={rnsSans.variable}>
+      <body className="font-sans antialiased">
         <AppProviders>
           <div className="min-h-screen flex flex-col">
             <Header />

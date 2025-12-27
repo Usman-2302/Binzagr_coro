@@ -12,6 +12,14 @@ import {
 const missionImg = "/assets/images/mission.png";
 const aboutVideo = "/assets/videos/about_binzagr.mp4";
 
+// Badge images
+import sfdaBadge from "@/public/assets/sources/Saudi-food.png";
+import haccpBadge from "@/public/assets/sources/haccp.png";
+import iso22000Badge from "@/public/assets/sources/iso-22000.png";
+import iso45001Badge from "@/public/assets/sources/iso-45001.png";
+import tetraBadge from "@/public/assets/sources/tetra-pack.png";
+import Image from "next/image";
+
 export default function AboutPage() {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(true);
@@ -49,7 +57,7 @@ export default function AboutPage() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight"
                     >
-                        A Global Heritage <br /> <span className="text-gradient italic">Crafted Locally</span>
+                        A Global Heritage <br /> <span className="text-gradient italic pr-4">Crafted Locally</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -191,9 +199,9 @@ export default function AboutPage() {
                                 ].map((stat, i) => (
                                     <div
                                         key={i}
-                                        className="p-8 rounded-[2rem] bg-white border border-secondary/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group"
+                                        className="p-8 rounded-[2rem] bg-white border border-primary/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group"
                                     >
-                                        <div className={`w-12 h-12 rounded-2xl mb-6 flex items-center justify-center transition-colors ${stat.accent === 'primary' ? 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white' : 'bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white'}`}>
+                                        <div className="w-12 h-12 rounded-2xl mb-6 flex items-center justify-center transition-colors bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white">
                                             <stat.icon className="w-6 h-6" />
                                         </div>
                                         <div className="text-4xl font-black text-secondary group-hover:text-primary transition-colors">{stat.title}</div>
@@ -240,21 +248,79 @@ export default function AboutPage() {
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <SectionHeading title="Quality & Trust" subtitle="Global standards, certified locally." />
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                         {[
-                            { title: "SFDA A+ Rating", desc: "Top Performance 2020-2021", icon: Award },
-                            { title: "ISO 22000", desc: "Food Safety Management", icon: ShieldCheck },
-                            { title: "ISO 45001", desc: "Health & Safety System", icon: Zap },
-                            { title: "HACCP", desc: "Certified Since 2011", icon: Trophy },
+                            { title: "SFDA A+ Rating", desc: "Top Performance 2020-2021", badge: sfdaBadge },
+                            { title: "ISO 22000", desc: "Food Safety Management", badge: iso22000Badge },
+                            { title: "ISO 45001", desc: "Health & Safety System", badge: iso45001Badge },
+                            { title: "HACCP", desc: "Certified Since 2011", badge: haccpBadge },
+                            { title: "Tetra Pack", desc: "Most Efficient Factory 2017", badge: tetraBadge },
                         ].map((cert, i) => (
-                            <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm border border-secondary/5 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
-                                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                                    <cert.icon className="w-6 h-6 text-primary" />
+                            <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm border border-secondary/5 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group">
+                                <div className="w-24 h-24 mx-auto mb-6 relative flex items-center justify-center">
+                                    <Image
+                                        src={cert.badge}
+                                        alt={cert.title}
+                                        width={96}
+                                        height={96}
+                                        className="object-contain group-hover:scale-110 transition-transform duration-500"
+                                    />
                                 </div>
                                 <h4 className="font-black text-secondary text-sm uppercase tracking-wider mb-2">{cert.title}</h4>
-                                <p className="text-xs text-muted-foreground font-medium">{cert.desc}</p>
+                                <p className="text-xs text-muted-foreground font-medium leading-relaxed">{cert.desc}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </Section>
+
+            {/* Global Market Presence */}
+            <Section className="bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-8">
+                            <SectionHeading
+                                title="Global Market Presence"
+                                subtitle="Serving consumers across continents with excellence."
+                                align="left"
+                            />
+                            <div className="space-y-6">
+                                <p className="text-xl text-muted-foreground leading-relaxed">
+                                    From our headquarters in Jeddah, Saudi Arabia, Binzagr CO-RO serves as a strategic manufacturing and distribution hub for the Middle East, GCC, and North African markets.
+                                </p>
+                                <div className="space-y-4">
+                                    <h3 className="font-black text-secondary text-sm uppercase tracking-wider">Regional Operations</h3>
+                                    <ul className="space-y-3">
+                                        {[
+                                            { region: "Middle East & GCC", detail: "Primary manufacturing hub in Jeddah" },
+                                            { region: "North Africa", detail: "Strategic export operations" },
+                                            { region: "Global Distribution", detail: "Products reach 80+ countries worldwide" },
+                                            { region: "Annual Production", detail: "3.5 billion servings delivered globally" }
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-muted/30 hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/20">
+                                                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                                                <div>
+                                                    <div className="font-bold text-secondary">{item.region}</div>
+                                                    <div className="text-sm text-muted-foreground font-medium">{item.detail}</div>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="relative">
+                            <div className="absolute -inset-4 bg-primary/5 rounded-[3rem] blur-3xl opacity-50" />
+                            <div className="relative aspect-square rounded-[3rem] overflow-hidden border border-secondary/10 shadow-xl">
+                                <Image
+                                    src="/assets/sources/shutterstock_479487457-scaled.jpg"
+                                    alt="Global Distribution Network"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Section>

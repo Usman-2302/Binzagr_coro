@@ -61,8 +61,18 @@ module.exports = {
                 },
             },
             fontFamily: {
-                sans: ["Inter", "system-ui", "sans-serif"],
-                heading: ["Poppins", "Inter", "system-ui", "sans-serif"],
+                sans: [
+                    'var(--font-rns-sans)',
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    '"Segoe UI"',
+                    'Roboto',
+                    'Oxygen',
+                    'Ubuntu',
+                    'Cantarell',
+                    '"Helvetica Neue"',
+                    'sans-serif',
+                ],
             },
             borderRadius: {
                 lg: "var(--radius)",

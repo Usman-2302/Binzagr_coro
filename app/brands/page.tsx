@@ -17,6 +17,8 @@ const brands = [
         tagline: "Pure Fruit Goodness",
         description: "Delicious fruit juices made from the finest ingredients, loved by children and adults alike. A staple of Saudi heritage for generations.",
         flavors: ["Orange", "Berry Mix", "Apple", "Mango", "Mixed Fruit", "Pineapple", "Blackcurrant"],
+        packaging: ["Tetra Pak 200ml", "Tetra Pak 1L", "PET Bottles"],
+        productType: "Ready-to-Drink Juice",
         image: suntopImg,
         link: "https://suntop.com.sa",
         accent: "bg-orange-500",
@@ -29,6 +31,8 @@ const brands = [
         tagline: "Refreshingly Different",
         description: "A unique, non-carbonated cola experience crafted specifically for the regional palate. The perfect blend of deep cola taste and smooth refreshment.",
         flavors: ["Classic Cola"],
+        packaging: ["Tetra Pak 200ml", "Tetra Pak 1L", "Cans 330ml"],
+        productType: "Non-Carbonated Beverage",
         image: suncolaImg,
         link: "https://www.suncola.com",
         accent: "bg-red-600",
@@ -41,6 +45,8 @@ const brands = [
         tagline: "Concentrated Flavor",
         description: "Premium fruit concentrates that bring families together. Made with real fruit juice, one bottle creates liters of delicious refreshing moments.",
         flavors: ["Orange", "Tropical", "Mandarin", "Lemon", "Mixed Berries"],
+        packaging: ["PET Bottles 330ml", "PET Bottles 700ml"],
+        productType: "Fruit Concentrate",
         image: sunquickImg,
         link: "https://www.sunquick.com",
         accent: "bg-yellow-500",
@@ -158,6 +164,23 @@ function BrandSection({ brand, index }: { brand: typeof brands[0], index: number
                                 {flavor}
                             </span>
                         ))}
+                    </div>
+
+                    <div className="space-y-4 pt-4">
+                        <div className="flex items-center gap-3">
+                            <span className="text-xs font-black uppercase tracking-wider text-secondary/40">Product Type:</span>
+                            <span className="text-sm font-bold text-secondary">{brand.productType}</span>
+                        </div>
+                        <div>
+                            <div className="text-xs font-black uppercase tracking-wider text-secondary/40 mb-2">Available Formats:</div>
+                            <div className="flex flex-wrap gap-2">
+                                {brand.packaging.map((format, idx) => (
+                                    <span key={idx} className="px-3 py-1 rounded-lg bg-white text-secondary text-xs font-bold border border-zinc-200">
+                                        {format}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
                     <Button asChild size="lg" className={`${brand.accent} text-white border-0 hover:opacity-90 hover:scale-105 transition-all duration-300 rounded-full px-10 py-6 text-lg shadow-xl shadow-orange-500/10`}>
