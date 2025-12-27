@@ -42,7 +42,7 @@ export default function CareersPage() {
     return (
         <div className="min-h-screen">
             {/* 1. Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-24 md:pt-0">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     {/* Using a factory/industrial image for authority */}
@@ -91,16 +91,14 @@ export default function CareersPage() {
                         ))}
 
                         {/* 6th Card: Professional Development */}
-                        <div className="bg-primary p-8 rounded-2xl shadow-xl flex flex-col justify-between text-white group">
-                            <div>
-                                <div className="h-14 w-14 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm mb-6">
-                                    <CheckCircle2 className="h-7 w-7 text-white" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3">Professional Development</h3>
-                                <p className="text-white/80 text-sm leading-relaxed">
-                                    We invest in our people through structured training programs and clear career advancement pathways.
-                                </p>
+                        <div className="bg-secondary/5 p-8 rounded-2xl border border-secondary/10 hover:border-primary/50 transition-colors group">
+                            <div className="h-14 w-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <CheckCircle2 className="h-7 w-7 text-primary" />
                             </div>
+                            <h3 className="text-xl font-bold text-secondary mb-3">Professional Development</h3>
+                            <p className="text-secondary/70 leading-relaxed text-sm">
+                                We invest in our people through structured training programs and clear career advancement pathways.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -179,11 +177,16 @@ export default function CareersPage() {
                             </div>
                         </div>
 
-                        {/* Side Item 2 */}
                         <div className="relative rounded-3xl overflow-hidden group shadow-lg">
-                            <div className="absolute inset-0 bg-secondary flex items-center justify-center">
-                                {/* Placeholder for video or more abstract industrial shot if available */}
-                                <Factory className="h-16 w-16 text-white/20" />
+                            <div className="absolute inset-0 bg-secondary group-hover:bg-secondary/80 transition-colors">
+                                <video
+                                    src="/assets/videos/intro.mp4"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                                />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                             <div className="absolute bottom-0 left-0 p-6">
@@ -195,27 +198,37 @@ export default function CareersPage() {
             </Section>
 
             {/* 5. CTA Section */}
-            <section className="py-20 bg-primary text-white text-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/assets/images/pattern.png')] opacity-10" />
-                <div className="container mx-auto px-4 max-w-4xl relative z-10">
-                    <h2 className="text-3xl md:text-5xl font-black mb-6">Ready to Join Us?</h2>
-                    <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-                        Explore our current openings and take the first step towards a rewarding career with a leading FMCG manufacturer.
-                    </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Button asChild size="lg" className="rounded-full px-12 text-lg bg-white hover:bg-white/90 text-primary font-bold h-16 shadow-2xl">
-                            <Link href="https://www.linkedin.com/company/binzagr-co-ro-ltd/jobs/" target="_blank" rel="noopener noreferrer">
-                                <Linkedin className="mr-3 h-5 w-5" />
-                                View Open Positions
-                            </Link>
-                        </Button>
+            <Section className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-primary opacity-95" />
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
-                        <div className="text-white/80 text-sm font-medium">
-                            or email your CV to <a href="mailto:careers@binzagrcoro.com" className="text-white font-bold hover:underline">careers@binzagrcoro.com</a>
+                {/* Glow Effects */}
+                <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-white/20 blur-[100px] rounded-full" />
+                <div className="absolute top-1/2 right-1/4 w-[300px] h-[300px] bg-accent-yellow/30 blur-[80px] rounded-full" />
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="max-w-3xl mx-auto text-center space-y-8">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
+                            Ready to Join Us?
+                        </h2>
+                        <p className="text-lg md:text-xl text-primary-foreground/80">
+                            Explore our current openings and take the first step towards a rewarding career with a leading FMCG manufacturer.
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                            <Button asChild size="lg" className="bg-gradient-primary text-white hover:opacity-90 transition-all duration-300 text-lg px-10 py-6 group shadow-orange hover:shadow-lg hover:-translate-y-1 rounded-full h-auto">
+                                <Link href="https://www.linkedin.com/company/binzagr-co-ro-ltd/jobs/" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin className="mr-3 h-5 w-5" />
+                                    View Open Positions
+                                </Link>
+                            </Button>
+
+                            <div className="text-primary-foreground/80 text-sm font-medium">
+                                or email your CV to <a href="mailto:careers@binzagrcoro.com" className="text-zinc-950 font-black hover:underline decoration-2 underline-offset-4">careers@binzagrcoro.com</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </Section>
         </div>
     );
 }
