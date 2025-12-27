@@ -32,7 +32,7 @@ export function HeroSection() {
       </motion.div>
 
       {/* Deep Gradient Overlay - Guaranteed Readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/95 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60 pointer-events-none" />
       <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
       {/* Orange Glow Effect */}

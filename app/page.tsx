@@ -9,6 +9,7 @@ import {
   AboutSection,
   BrandsSection,
   WhyChooseUsSection,
+  MarketPresenceSection,
   CTASection,
 } from "@/components/home";
 
@@ -21,6 +22,7 @@ export default function HomePage() {
       <BrandsSection />
       <ManufacturingSection />
       <StatsSection />
+      <MarketPresenceSection />
       <SustainabilitySection />
       <WhyChooseUsSection />
       <CTASection />
