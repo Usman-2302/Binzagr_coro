@@ -42,7 +42,7 @@ export default function CareersPage() {
     return (
         <div className="min-h-screen">
             {/* 1. Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-24 md:pt-0">
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-32 md:pt-0">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     {/* Using a factory/industrial image for authority */}
@@ -157,9 +157,9 @@ export default function CareersPage() {
                         className="mb-12"
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-[600px] md:h-[500px]">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-auto md:h-[800px]">
                         {/* Large Main Item */}
-                        <div className="md:col-span-2 row-span-2 relative rounded-3xl overflow-hidden group shadow-lg">
+                        <div className="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden group shadow-lg min-h-[400px] md:min-h-0">
                             <img src="/assets/sources/1760930665698.jpeg" alt="Teamwork" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                             <div className="absolute bottom-0 left-0 p-8">
@@ -169,7 +169,7 @@ export default function CareersPage() {
                         </div>
 
                         {/* Side Item 1 */}
-                        <div className="relative rounded-3xl overflow-hidden group shadow-lg">
+                        <div className="relative rounded-3xl overflow-hidden group shadow-lg aspect-video md:aspect-auto">
                             <img src="/assets/sources/1760930665983.jpeg" alt="Production Line" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                             <div className="absolute bottom-0 left-0 p-6">
@@ -177,7 +177,8 @@ export default function CareersPage() {
                             </div>
                         </div>
 
-                        <div className="relative rounded-3xl overflow-hidden group shadow-lg">
+                        {/* Side Item 2 (Video Card) */}
+                        <div className="relative rounded-3xl overflow-hidden group shadow-lg aspect-video md:aspect-auto">
                             <div className="absolute inset-0 bg-secondary group-hover:bg-secondary/80 transition-colors">
                                 <video
                                     src="/assets/videos/intro.mp4"

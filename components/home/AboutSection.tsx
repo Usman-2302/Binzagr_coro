@@ -14,8 +14,8 @@ export function AboutSection() {
           {/* Content */}
           <div className="space-y-6">
             <SectionHeading
-              title="Enterprise Scale"
-              subtitle="Manufacturing Excellence in Saudi Arabia"
+              title="Manufacturing Excellence"
+              subtitle="Precision Engineering on a Global Scale"
               align="left"
               className="mb-8"
             />
@@ -30,7 +30,7 @@ export function AboutSection() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button asChild size="lg" className="bg-secondary text-white hover:bg-primary transition-all duration-500 rounded-full px-10 shadow-xl group">
+              <Button asChild size="lg" className="bg-primary text-white hover:bg-secondary transition-all duration-500 rounded-full px-10 shadow-xl group">
                 <Link href="/about" className="flex items-center gap-3">
                   <span className="font-black uppercase tracking-wider text-sm">Learn More About Us</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />

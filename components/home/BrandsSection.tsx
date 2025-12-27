@@ -43,8 +43,8 @@ export function BrandsSection() {
     <Section className="bg-neutral-50/80">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="FMCG Leadership"
-          subtitle="Discover the iconic beverage portfolio trusted by millions across the Kingdom for nearly five decades."
+          title="Our Iconic Portfolio"
+          subtitle="Discover the trusted beverage brands that have captured the hearts of millions across the Kingdom for generations."
         />
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -70,7 +70,7 @@ export function BrandsSection() {
               {/* Content */}
               <div className="p-6 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold mb-1">{brand.name}</h3>
+                  <h3 className="text-2xl font-bold mb-1 text-secondary">{brand.name}</h3>
                   <p className="text-primary font-medium">{brand.tagline}</p>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">
