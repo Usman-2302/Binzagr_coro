@@ -222,10 +222,10 @@ export default function CareersPage() {
                                     View Open Positions
                                 </Link>
                             </Button>
+                        </div>
 
-                            <div className="text-primary-foreground/80 text-sm font-medium">
-                                or email your CV to <a href="mailto:careers@binzagrcoro.com" className="text-zinc-950 font-black hover:underline decoration-2 underline-offset-4">careers@binzagrcoro.com</a>
-                            </div>
+                        <div className="text-primary-foreground/80 text-sm font-medium pt-4">
+                            or email your CV to <a href="mailto:info@binzcoro.com" className="text-zinc-950 font-black hover:underline decoration-2 underline-offset-4">info@binzcoro.com</a>
                         </div>
                     </div>
                 </div>

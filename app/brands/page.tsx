@@ -15,7 +15,8 @@ const brands = [
         name: "Suntop",
         category: "Fruit Juice & Drinks",
         tagline: "Pure Fruit Goodness",
-        description: "Delicious fruit juices made from the finest ingredients, loved by children and adults alike. Available in multiple refreshing flavors.",
+        description: "Delicious fruit juices made from the finest ingredients, loved by children and adults alike. A staple of Saudi heritage for generations.",
+        flavors: ["Orange", "Berry Mix", "Apple", "Mango", "Mixed Fruit", "Pineapple", "Blackcurrant"],
         image: suntopImg,
         link: "https://suntop.com.sa",
         accent: "bg-orange-500",
@@ -26,9 +27,10 @@ const brands = [
         name: "Suncola",
         category: "Carbonated Beverage",
         tagline: "Refreshingly Different",
-        description: "A unique cola experience crafted specifically for the Saudi Arabian palate. The perfect blend of taste and refreshment.",
+        description: "A unique, non-carbonated cola experience crafted specifically for the regional palate. The perfect blend of deep cola taste and smooth refreshment.",
+        flavors: ["Classic Cola"],
         image: suncolaImg,
-        link: "https://suncola.com.sa",
+        link: "https://www.suncola.com",
         accent: "bg-red-600",
         gradient: "from-red-600/20 to-orange-600/5"
     },
@@ -37,9 +39,10 @@ const brands = [
         name: "Sunquick",
         category: "Fruit Concentrate",
         tagline: "Concentrated Flavor",
-        description: "Premium fruit concentrates that bring families together for moments of pure refreshment. Just add water for delicious drinks.",
+        description: "Premium fruit concentrates that bring families together. Made with real fruit juice, one bottle creates liters of delicious refreshing moments.",
+        flavors: ["Orange", "Tropical", "Mandarin", "Lemon", "Mixed Berries"],
         image: sunquickImg,
-        link: "https://sunquick.com",
+        link: "https://www.sunquick.com",
         accent: "bg-yellow-500",
         gradient: "from-yellow-500/20 to-orange-500/5"
     },
@@ -148,6 +151,14 @@ function BrandSection({ brand, index }: { brand: typeof brands[0], index: number
                     <p className="text-lg md:text-xl text-zinc-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
                         {brand.description}
                     </p>
+
+                    <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                        {brand.flavors.map((flavor, idx) => (
+                            <span key={idx} className="px-3 py-1 rounded-lg bg-zinc-100 text-secondary/60 text-[10px] font-black uppercase tracking-widest border border-zinc-200">
+                                {flavor}
+                            </span>
+                        ))}
+                    </div>
 
                     <Button asChild size="lg" className={`${brand.accent} text-white border-0 hover:opacity-90 hover:scale-105 transition-all duration-300 rounded-full px-10 py-6 text-lg shadow-xl shadow-orange-500/10`}>
                         <a href={brand.link} target="_blank" rel="noopener noreferrer">

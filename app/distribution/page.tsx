@@ -48,11 +48,11 @@ export default function DistributionPage() {
                     >
                         <h4 className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-6">Logistics Excellence</h4>
                         <h1 className="text-5xl md:text-7xl font-black text-white mb-8 uppercase tracking-tight">
-                            Nationwide <span className="text-primary italic">Reach</span>
+                            Global <span className="text-primary italic text-gradient-primary">Export Hub</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-medium leading-relaxed">
                             Operating a sophisticated logistics network that spans the Kingdom,
-                            ensuring industrial-grade efficiency from facility to retail.
+                            and serving as a strategic <strong>Exporting Hub</strong> for GCC and North African countries.
                         </p>
                     </motion.div>
                 </div>
