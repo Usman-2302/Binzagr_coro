@@ -76,7 +76,7 @@ export default function BrandsPage() {
                         transition={{ duration: 1 }}
                         className="space-y-6 mt-auto mb-auto"
                     >
-                        <h1 className="text-6xl md:text-8xl font-extrabold uppercase tracking-tighter text-white drop-shadow-2xl">
+                        <h1 className="text-5xl md:text-7xl font-extrabold uppercase tracking-tighter text-white drop-shadow-2xl">
                             Our Brands
                         </h1>
                         <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-lg">

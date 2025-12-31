@@ -103,7 +103,7 @@ export function Footer() {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-bold mb-8 text-white">Contact Terminal</h4>
+              <h4 className="text-lg font-bold mb-8 text-white">Contact Us</h4>
               <ul className="space-y-5">
                 <li className="flex items-start gap-4">
                   <MapPin className="h-5 w-5 text-primary shrink-0 mt-1" />

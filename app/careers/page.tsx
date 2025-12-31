@@ -225,7 +225,7 @@ export default function CareersPage() {
                         </div>
 
                         <div className="text-primary-foreground/80 text-sm font-medium pt-4">
-                            or email your CV to <a href="mailto:info@binzcoro.com" className="text-zinc-950 font-bold hover:underline decoration-2 underline-offset-4">info@binzcoro.com</a>
+                            or email your CV to <a href="mailto:info@binzagrcoro.com" className="text-zinc-950 font-bold hover:underline decoration-2 underline-offset-4">info@binzagrcoro.com</a>
                         </div>
                     </div>
                 </div>

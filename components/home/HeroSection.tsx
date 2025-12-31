@@ -64,7 +64,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-6 group"
+              className="bg-gradient-primary hover:opacity-90 transition-all duration-300 text-lg px-8 py-6 group rounded-full shadow-lg hover:-translate-y-1"
             >
               <Link href="/brands">
                 Explore Our Brands
@@ -75,7 +75,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary text-white hover:bg-primary transition-all duration-500 text-lg px-8 py-6 group rounded-full bg-black/50 backdrop-blur-md shadow-lg"
+              className="border-primary text-white hover:bg-primary transition-all duration-300 text-lg px-8 py-6 group rounded-full bg-black/50 backdrop-blur-md shadow-lg hover:-translate-y-1"
             >
               <Link href="/about" className="flex items-center">
                 <Play className="mr-3 h-4 w-4 fill-current group-hover:scale-110 transition-transform" />

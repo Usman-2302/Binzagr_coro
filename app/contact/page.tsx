@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Loader2 } from "lucide-react";
 
 export default function ContactPage() {
     const { toast } = useToast();
@@ -63,8 +63,8 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-xl font-semibold text-secondary mb-2">Headquarters</h3>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            Industrial Area, 21462<br />
-                                            PO Box 7004, Jeddah, Saudi Arabia
+                                            Al Mahjar, Industrial Area South<br />
+                                            Jeddah 21411, Saudi Arabia
                                         </p>
                                     </div>
                                 </div>
@@ -150,7 +150,14 @@ export default function ContactPage() {
                                     />
                                 </div>
                                 <Button size="lg" type="submit" className="w-full bg-gradient-primary text-white hover:opacity-90 text-lg py-6 rounded-xl shadow-orange" disabled={isSubmitting}>
-                                    {isSubmitting ? "Sending..." : "Send Message"}
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                                            Sending...
+                                        </>
+                                    ) : (
+                                        "Send Message"
+                                    )}
                                 </Button>
                             </form>
                         </div>

@@ -47,7 +47,7 @@ export default function DistributionPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <h4 className="text-primary font-semibold tracking-[0.3em] uppercase text-xs mb-6">Logistics Excellence</h4>
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-8 uppercase tracking-tight">
                             Global <span className="text-primary italic text-gradient-primary">Export Hub</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-medium leading-relaxed">
