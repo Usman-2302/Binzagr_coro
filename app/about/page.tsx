@@ -47,7 +47,7 @@ export default function AboutPage() {
                     <motion.h4
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-6"
+                        className="text-primary font-semibold uppercase tracking-[0.3em] text-xs mb-6"
                     >
                         Specialists in Fruit Drinks
                     </motion.h4>
@@ -55,7 +55,7 @@ export default function AboutPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight"
+                        className="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight"
                     >
                         A Global Heritage <br /> <span className="text-gradient italic pr-4">Crafted Locally</span>
                     </motion.h1>
@@ -78,9 +78,9 @@ export default function AboutPage() {
                         <div className="space-y-8">
                             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
                                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                                <span className="text-xs font-black uppercase tracking-widest">Our Global Roots</span>
+                                <span className="text-xs font-semibold uppercase tracking-widest">Our Global Roots</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight uppercase">
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-secondary leading-tight uppercase">
                                 Refreshing The World <br /><span className="text-primary italic">Since 1942</span>
                             </h2>
                             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -99,8 +99,8 @@ export default function AboutPage() {
                                     { label: "Employees", value: "1200+" },
                                 ].map((stat, i) => (
                                     <div key={i} className="p-4 rounded-2xl bg-secondary/5 border border-secondary/5">
-                                        <div className="text-primary font-black text-2xl">{stat.value}</div>
-                                        <div className="text-secondary/60 text-xs font-bold uppercase tracking-wider">{stat.label}</div>
+                                        <div className="text-primary font-semibold text-xl">{stat.value}</div>
+                                        <div className="text-secondary/60 text-xs font-semibold uppercase tracking-wider">{stat.label}</div>
                                     </div>
                                 ))}
                             </div>
@@ -137,11 +137,11 @@ export default function AboutPage() {
                         <motion.h4
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4"
+                            className="text-primary font-semibold uppercase tracking-[0.3em] text-xs mb-4"
                         >
                             Our Strategy
                         </motion.h4>
-                        <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase text-white">
+                        <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight uppercase text-white">
                             To Refresh <br /><span className="text-primary italic">And Delight</span>
                         </h2>
                         <p className="text-xl text-white/80 leading-relaxed font-medium">
@@ -176,7 +176,7 @@ export default function AboutPage() {
                                 className="p-10 rounded-[2.5rem] bg-white/10 border border-white/20 hover:bg-white/20 hover:border-primary/50 transition-all duration-500 group"
                             >
                                 <item.icon className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform" />
-                                <h3 className="text-2xl font-bold mb-4 text-white">{item.title}</h3>
+                                <h3 className="text-2xl font-semibold mb-4 text-white">{item.title}</h3>
                                 <p className="text-white/70 leading-relaxed font-medium">{item.desc}</p>
                             </motion.div>
                         ))}
@@ -204,8 +204,8 @@ export default function AboutPage() {
                                         <div className="w-12 h-12 rounded-2xl mb-6 flex items-center justify-center transition-colors bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white">
                                             <stat.icon className="w-6 h-6" />
                                         </div>
-                                        <div className="text-4xl font-black text-secondary group-hover:text-primary transition-colors">{stat.title}</div>
-                                        <div className="text-secondary/60 text-[10px] font-black uppercase tracking-[0.2em] mt-2 leading-tight">
+                                        <div className="text-3xl font-semibold text-secondary group-hover:text-primary transition-colors">{stat.title}</div>
+                                        <div className="text-secondary/60 text-[10px] font-semibold uppercase tracking-[0.2em] mt-2 leading-tight">
                                             {stat.sub}
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@ export default function AboutPage() {
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-secondary/5 hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/20">
                                             <div className="w-2 h-2 rounded-full bg-primary" />
-                                            <span className="font-bold text-secondary text-sm">{item}</span>
+                                            <span className="font-semibold text-secondary text-sm">{item}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -266,7 +266,7 @@ export default function AboutPage() {
                                         className="object-contain group-hover:scale-110 transition-transform duration-500"
                                     />
                                 </div>
-                                <h4 className="font-black text-secondary text-sm uppercase tracking-wider mb-2">{cert.title}</h4>
+                                <h4 className="font-bold text-secondary text-sm uppercase tracking-wider mb-2">{cert.title}</h4>
                                 <p className="text-xs text-muted-foreground font-medium leading-relaxed">{cert.desc}</p>
                             </div>
                         ))}
@@ -289,7 +289,7 @@ export default function AboutPage() {
                                     From our headquarters in Jeddah, Saudi Arabia, Binzagr CO-RO serves as a strategic manufacturing and distribution hub for the Middle East, GCC, and North African markets.
                                 </p>
                                 <div className="space-y-4">
-                                    <h3 className="font-black text-secondary text-sm uppercase tracking-wider">Regional Operations</h3>
+                                    <h3 className="font-bold text-secondary text-sm uppercase tracking-wider">Regional Operations</h3>
                                     <ul className="space-y-3">
                                         {[
                                             { region: "Middle East & GCC", detail: "Primary manufacturing hub in Jeddah" },
@@ -371,7 +371,7 @@ export default function AboutPage() {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                                     <div className="absolute bottom-6 left-6 right-6">
-                                        <div className="text-primary font-black text-xs uppercase tracking-widest mb-1">{member.role}</div>
+                                        <div className="text-primary font-semibold text-xs uppercase tracking-widest mb-1">{member.role}</div>
                                         <div className="text-white font-bold text-xl">{member.name}</div>
                                     </div>
                                 </div>
@@ -465,9 +465,9 @@ function TimelineSection() {
                                 <div className="w-full md:w-[45%] pl-12 md:pl-0">
                                     <div className="p-8 rounded-[2rem] bg-secondary/5 border border-secondary/5 relative overflow-hidden group hover:bg-white hover:shadow-2xl transition-all duration-500">
                                         <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                                            <span className="text-6xl font-black">{item.year}</span>
+                                            <span className="text-6xl font-bold">{item.year}</span>
                                         </div>
-                                        <span className="text-primary font-black text-2xl mb-2 block">{item.year}</span>
+                                        <span className="text-primary font-bold text-2xl mb-2 block">{item.year}</span>
                                         <h3 className="text-2xl font-bold text-secondary mb-3">{item.title}</h3>
                                         <p className="text-muted-foreground leading-relaxed font-medium">{item.desc}</p>
                                     </div>

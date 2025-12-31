@@ -36,7 +36,7 @@ export function ManufacturingSection() {
                             className="space-y-4"
                         >
                             <div className="w-16 h-1.5 bg-primary mb-6" />
-                            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
                                 Industrial <br />
                                 <span className="text-primary italic">Precision</span>
                             </h2>
@@ -59,7 +59,7 @@ export function ManufacturingSection() {
                     >
                         <div className="space-y-4">
                             <h4 className="text-primary font-bold tracking-[0.3em] uppercase text-xs">Capabilities & Scale</h4>
-                            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight uppercase">
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight uppercase">
                                 Industrial <br />
                                 <span className="text-primary italic">Excellence</span>
                             </h2>
@@ -88,7 +88,7 @@ export function ManufacturingSection() {
                                         {item.icon}
                                     </div>
                                     <div className="space-y-1">
-                                        <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                                        <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                                             {item.title}
                                         </h3>
                                         <p className="text-white/70 leading-relaxed text-sm">
@@ -113,7 +113,7 @@ export function ManufacturingSection() {
                                     ))}
                                 </div>
                                 <p className="text-sm font-medium text-white/70">
-                                    <span className="text-white font-bold text-lg block italic">Vision 2030 Aligned</span>
+                                    <span className="text-white font-semibold text-lg block italic">Vision 2030 Aligned</span>
                                     Driving Saudi Arabia's industrial localization goals.
                                 </p>
                             </div>

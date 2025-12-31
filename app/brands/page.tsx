@@ -76,7 +76,7 @@ export default function BrandsPage() {
                         transition={{ duration: 1 }}
                         className="space-y-6 mt-auto mb-auto"
                     >
-                        <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white drop-shadow-2xl">
+                        <h1 className="text-6xl md:text-8xl font-extrabold uppercase tracking-tighter text-white drop-shadow-2xl">
                             Our Brands
                         </h1>
                         <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-lg">
@@ -146,7 +146,7 @@ function BrandSection({ brand, index }: { brand: typeof brands[0], index: number
                         <span className={`inline-block px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4 bg-secondary/10 text-secondary`}>
                             {brand.category}
                         </span>
-                        <h2 className="text-5xl md:text-7xl font-black text-secondary tracking-tight mb-2">
+                        <h2 className="text-5xl md:text-7xl font-bold text-secondary tracking-tight mb-2">
                             {brand.name}
                         </h2>
                         <h3 className={`text-2xl md:text-3xl font-serif italic text-primary`}>
@@ -160,7 +160,7 @@ function BrandSection({ brand, index }: { brand: typeof brands[0], index: number
 
                     <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                         {brand.flavors.map((flavor, idx) => (
-                            <span key={idx} className="px-3 py-1 rounded-lg bg-zinc-100 text-secondary/60 text-[10px] font-black uppercase tracking-widest border border-zinc-200">
+                            <span key={idx} className="px-3 py-1 rounded-lg bg-zinc-100 text-secondary/60 text-[10px] font-semibold uppercase tracking-widest border border-zinc-200">
                                 {flavor}
                             </span>
                         ))}
@@ -168,11 +168,11 @@ function BrandSection({ brand, index }: { brand: typeof brands[0], index: number
 
                     <div className="space-y-4 pt-4">
                         <div className="flex items-center gap-3">
-                            <span className="text-xs font-black uppercase tracking-wider text-secondary/40">Product Type:</span>
+                            <span className="text-xs font-semibold uppercase tracking-wider text-secondary/40">Product Type:</span>
                             <span className="text-sm font-bold text-secondary">{brand.productType}</span>
                         </div>
                         <div>
-                            <div className="text-xs font-black uppercase tracking-wider text-secondary/40 mb-2">Available Formats:</div>
+                            <div className="text-xs font-semibold uppercase tracking-wider text-secondary/40 mb-2">Available Formats:</div>
                             <div className="flex flex-wrap gap-2">
                                 {brand.packaging.map((format, idx) => (
                                     <span key={idx} className="px-3 py-1 rounded-lg bg-white text-secondary text-xs font-bold border border-zinc-200">

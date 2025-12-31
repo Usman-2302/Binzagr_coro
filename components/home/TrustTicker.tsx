@@ -29,7 +29,7 @@ export function TrustTicker() {
                         />
                         <div className="h-px w-24 bg-primary/20" />
                     </motion.div>
-                    <p className="text-center text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-secondary/60">
+                    <p className="text-center text-[10px] md:text-xs font-semibold uppercase tracking-[0.4em] text-secondary/60">
                         Global Standards & Industrial Excellence
                     </p>
                 </div>
@@ -47,7 +47,7 @@ export function TrustTicker() {
                     {[...certifications, ...certifications].map((cert, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-4 mx-8 text-lg md:text-xl font-black text-secondary/40 uppercase tracking-widest grayscale transition-all duration-700 hover:text-primary hover:grayscale-0"
+                            className="flex items-center gap-4 mx-8 text-lg md:text-xl font-bold text-secondary/40 uppercase tracking-widest grayscale transition-all duration-700 hover:text-primary hover:grayscale-0"
                         >
                             <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
                             {cert}

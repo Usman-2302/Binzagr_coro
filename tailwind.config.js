@@ -37,17 +37,20 @@ module.exports = {
                     DEFAULT: "hsl(var(--accent))",
                     foreground: "hsl(var(--accent-foreground))",
                 },
-                "accent-yellow": {
-                    DEFAULT: "hsl(var(--accent-yellow))",
-                    foreground: "hsl(var(--accent-yellow-foreground))",
+                "brand-accent-green": {
+                    DEFAULT: "rgb(13, 161, 78)",
                 },
-                popover: {
-                    DEFAULT: "hsl(var(--popover))",
-                    foreground: "hsl(var(--popover-foreground))",
+                "brand-accent-yellow": {
+                    DEFAULT: "rgb(253, 184, 21)",
                 },
-                card: {
-                    DEFAULT: "hsl(var(--card))",
-                    foreground: "hsl(var(--card-foreground))",
+                "brand-dark": {
+                    DEFAULT: "rgb(40, 48, 61)",
+                },
+                "brand-muted": {
+                    DEFAULT: "rgb(122, 122, 122)",
+                },
+                "brand-bg": {
+                    DEFAULT: "rgb(249, 244, 241)",
                 },
                 sidebar: {
                     DEFAULT: "hsl(var(--sidebar-background))",
@@ -73,6 +76,7 @@ module.exports = {
                     '"Helvetica Neue"',
                     'sans-serif',
                 ],
+                roboto: ['var(--font-roboto)', 'sans-serif'],
             },
             borderRadius: {
                 lg: "var(--radius)",

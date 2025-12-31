@@ -58,13 +58,13 @@ export function MarketPresenceSection() {
                             align="left"
                             className="mb-0"
                         />
-                        <h2 className="text-4xl md:text-5xl font-black text-secondary tracking-tight -mt-4">
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-secondary tracking-tight -mt-4">
                             Market Presence & <span className="text-primary">Distribution</span>
                         </h2>
                     </div>
                     <div className="flex items-center gap-3 bg-secondary/5 px-6 py-3 rounded-2xl h-fit">
                         <MapPin className="text-primary h-5 w-5" />
-                        <span className="text-secondary font-bold text-sm tracking-tight uppercase">Nationwide Coverage</span>
+                        <span className="text-secondary font-semibold text-sm tracking-tight uppercase">Nationwide Coverage</span>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@ export function MarketPresenceSection() {
                                 <channel.icon className="text-secondary h-7 w-7 group-hover:text-white transition-colors" />
                             </div>
 
-                            <h3 className="text-lg font-bold text-secondary mb-3 group-hover:text-primary transition-colors">
+                            <h3 className="text-lg font-semibold text-secondary mb-3 group-hover:text-primary transition-colors">
                                 {channel.title}
                             </h3>
 
@@ -91,7 +91,7 @@ export function MarketPresenceSection() {
                             </p>
 
                             <div className="pt-4 border-t border-zinc-200/60 mt-auto">
-                                <span className="text-[10px] font-black uppercase tracking-[0.15em] text-secondary/40 group-hover:text-primary/60 transition-colors">
+                                <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-secondary/40 group-hover:text-primary/60 transition-colors">
                                     {channel.stats}
                                 </span>
                             </div>

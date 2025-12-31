@@ -57,7 +57,7 @@ export default function CareersPage() {
                 <div className="container relative z-10 px-4">
                     <div className="max-w-3xl animate-fade-in-up">
                         <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Careers at Binzagr Coro</span>
-                        <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+                        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                             Build Your Career with <br /> <span className="text-primary">Manufacturing Excellence</span>
                         </h1>
                         <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
@@ -83,7 +83,7 @@ export default function CareersPage() {
                                 <div className="h-14 w-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
                                     <benefit.icon className="h-7 w-7 text-primary" />
                                 </div>
-                                <h3 className="text-xl font-bold text-secondary mb-3">{benefit.title}</h3>
+                                <h3 className="text-xl font-semibold text-secondary mb-3">{benefit.title}</h3>
                                 <p className="text-secondary/70 leading-relaxed text-sm">
                                     {benefit.description}
                                 </p>
@@ -95,7 +95,7 @@ export default function CareersPage() {
                             <div className="h-14 w-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <CheckCircle2 className="h-7 w-7 text-primary" />
                             </div>
-                            <h3 className="text-xl font-bold text-secondary mb-3">Professional Development</h3>
+                            <h3 className="text-xl font-semibold text-secondary mb-3">Professional Development</h3>
                             <p className="text-secondary/70 leading-relaxed text-sm">
                                 We invest in our people through structured training programs and clear career advancement pathways.
                             </p>
@@ -110,7 +110,7 @@ export default function CareersPage() {
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         {/* Text Content */}
                         <div className="lg:w-1/2 space-y-6">
-                            <h2 className="text-3xl md:text-4xl font-black text-secondary">
+                            <h2 className="text-3xl md:text-4xl font-bold text-secondary">
                                 Certified as a <span className="text-primary">Great Place to Work®</span>
                             </h2>
                             <p className="text-lg text-secondary/70 leading-relaxed">
@@ -225,7 +225,7 @@ export default function CareersPage() {
                         </div>
 
                         <div className="text-primary-foreground/80 text-sm font-medium pt-4">
-                            or email your CV to <a href="mailto:info@binzcoro.com" className="text-zinc-950 font-black hover:underline decoration-2 underline-offset-4">info@binzcoro.com</a>
+                            or email your CV to <a href="mailto:info@binzcoro.com" className="text-zinc-950 font-bold hover:underline decoration-2 underline-offset-4">info@binzcoro.com</a>
                         </div>
                     </div>
                 </div>

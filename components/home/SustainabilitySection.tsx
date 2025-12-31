@@ -21,7 +21,7 @@ export function SustainabilitySection() {
                         />
                         <div className="absolute inset-0 bg-secondary/20" />
                         <div className="absolute bottom-8 left-8 right-8 p-8 glass-card rounded-2xl">
-                            <h3 className="text-2xl font-black text-secondary mb-2 uppercase">Vision 2030 Aligned</h3>
+                            <h3 className="text-2xl font-bold text-secondary mb-2 uppercase">Vision 2030 Aligned</h3>
                             <p className="text-secondary/80">Leading the way in sustainable beverage production and distribution across the Kingdom.</p>
                         </div>
                     </motion.div>
@@ -36,7 +36,7 @@ export function SustainabilitySection() {
                     >
                         <div className="space-y-4">
                             <h4 className="text-accent font-bold tracking-widest uppercase text-sm">Our Commitment</h4>
-                            <h2 className="text-4xl md:text-5xl font-black leading-tight text-secondary">
+                            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-secondary">
                                 Sustainable Future for the Next <span className="text-accent italic">Generations</span>
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -73,7 +73,7 @@ export function SustainabilitySection() {
                                         {item.icon}
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-secondary text-lg group-hover:text-accent transition-colors">{item.title}</h4>
+                                        <h4 className="font-semibold text-secondary text-lg group-hover:text-accent transition-colors">{item.title}</h4>
                                         <p className="text-muted-foreground">{item.desc}</p>
                                     </div>
                                 </motion.div>

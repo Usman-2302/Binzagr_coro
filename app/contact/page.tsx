@@ -61,7 +61,7 @@ export default function ContactPage() {
                                         <MapPin className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-secondary mb-2">Headquarters</h3>
+                                        <h3 className="text-xl font-semibold text-secondary mb-2">Headquarters</h3>
                                         <p className="text-muted-foreground leading-relaxed">
                                             Industrial Area, 21462<br />
                                             PO Box 7004, Jeddah, Saudi Arabia
@@ -74,7 +74,7 @@ export default function ContactPage() {
                                         <Phone className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-secondary mb-2">Phone</h3>
+                                        <h3 className="text-xl font-semibold text-secondary mb-2">Phone</h3>
                                         <p className="text-muted-foreground leading-relaxed mb-1">
                                             <a href="tel:+966126369626" className="hover:text-primary transition-colors">+966 12 636 9626</a>
                                         </p>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                                         <Mail className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-secondary mb-2">Email</h3>
+                                        <h3 className="text-xl font-semibold text-secondary mb-2">Email</h3>
                                         <p className="text-muted-foreground leading-relaxed">
                                             <a href="mailto:info@binzagrcoro.com" className="hover:text-primary transition-colors">info@binzagrcoro.com</a>
                                         </p>
@@ -99,7 +99,7 @@ export default function ContactPage() {
 
                         {/* Contact Form */}
                         <div className="bg-card rounded-[2.5rem] p-8 md:p-10 shadow-2xl border border-secondary/5">
-                            <h3 className="text-2xl font-bold text-secondary mb-8">Send us a Message</h3>
+                            <h3 className="text-2xl font-semibold text-secondary mb-8">Send us a Message</h3>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="space-y-2">

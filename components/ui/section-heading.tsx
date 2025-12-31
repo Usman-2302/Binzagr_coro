@@ -22,7 +22,7 @@ export function SectionHeading({
         className
       )}
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-inherit uppercase tracking-tight">{title}</h2>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-inherit uppercase tracking-tight">{title}</h2>
       {subtitle && (
         <p className="text-inherit opacity-70 text-lg md:text-xl max-w-3xl mx-auto">
           {subtitle}

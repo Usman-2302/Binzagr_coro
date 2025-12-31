@@ -46,8 +46,8 @@ export default function DistributionPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h4 className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-6">Logistics Excellence</h4>
-                        <h1 className="text-5xl md:text-7xl font-black text-white mb-8 uppercase tracking-tight">
+                        <h4 className="text-primary font-semibold tracking-[0.3em] uppercase text-xs mb-6">Logistics Excellence</h4>
+                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
                             Global <span className="text-primary italic text-gradient-primary">Export Hub</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-medium leading-relaxed">
@@ -80,7 +80,7 @@ export default function DistributionPage() {
                                         {stat.icon}
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-secondary text-lg">{stat.title}</h4>
+                                        <h4 className="font-semibold text-secondary text-lg">{stat.title}</h4>
                                         <p className="text-muted-foreground">{stat.desc}</p>
                                     </div>
                                 </motion.div>
@@ -153,7 +153,7 @@ export default function DistributionPage() {
                                             x={city.x}
                                             y={city.y + 25}
                                             textAnchor="middle"
-                                            className="fill-secondary font-black text-xs uppercase tracking-tighter"
+                                            className="fill-secondary font-bold text-xs uppercase tracking-tighter"
                                         >
                                             {city.name}
                                         </text>
@@ -169,7 +169,7 @@ export default function DistributionPage() {
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
                         <div className="space-y-8 text-left">
                             <div className="w-16 h-1.5 bg-primary" />
-                            <h2 className="text-3xl md:text-5xl font-black text-secondary leading-tight uppercase">Strategic <br /><span className="text-primary italic">Infrastructure</span></h2>
+                            <h2 className="text-3xl md:text-5xl font-bold text-secondary leading-tight uppercase">Strategic <br /><span className="text-primary italic">Infrastructure</span></h2>
                             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                                 Our logistics ecosystem is built on precision. With multi-temperature storage facilities
                                 and a fleet of over 500 specialized vehicles, we maintain the integrity of our brands

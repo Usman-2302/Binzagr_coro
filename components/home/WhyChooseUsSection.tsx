@@ -66,10 +66,10 @@ export function WhyChooseUsSection() {
                 </div>
               </div>
 
-              <span className="block text-[10px] font-black uppercase tracking-[0.2em] text-secondary/40 mb-3">
+              <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-secondary/40 mb-3">
                 {pillar.tier}
               </span>
-              <h3 className="text-xl md:text-2xl font-black text-secondary mb-4 leading-tight group-hover:text-primary transition-colors">
+              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-4 leading-tight group-hover:text-primary transition-colors">
                 {pillar.title}
               </h3>
               <p className="text-zinc-600 text-sm leading-relaxed">

@@ -48,7 +48,7 @@ export function HeroSection() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight animate-fade-up delay-100">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-primary-foreground leading-tight animate-fade-up delay-100">
             Crafting <span className="text-gradient">Refreshing</span><br />
             Moments Every Day
           </h1>
@@ -88,7 +88,7 @@ export function HeroSection() {
 
       {/* Innovative Scroll Indicator */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 group cursor-pointer z-20">
-        <span className="text-[8px] font-black uppercase tracking-[0.5em] text-white/50 group-hover:text-primary transition-colors">Scroll</span>
+        <span className="text-[8px] font-semibold uppercase tracking-[0.5em] text-white/50 group-hover:text-primary transition-colors">Scroll</span>
         <div className="w-px h-10 bg-gradient-to-b from-primary to-transparent relative overflow-hidden">
           <motion.div
             animate={{ y: ["-100%", "100%"] }}

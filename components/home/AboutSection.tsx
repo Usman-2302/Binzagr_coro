@@ -32,7 +32,7 @@ export function AboutSection() {
             <div className="flex flex-wrap gap-4 pt-4">
               <Button asChild size="lg" className="bg-primary text-white hover:bg-secondary transition-all duration-500 rounded-full px-10 shadow-xl group">
                 <Link href="/about" className="flex items-center gap-3">
-                  <span className="font-black uppercase tracking-wider text-sm">Learn More About Us</span>
+                  <span className="font-bold uppercase tracking-wider text-sm">Learn More About Us</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </Button>
@@ -53,8 +53,8 @@ export function AboutSection() {
             {/* Experience Badge */}
             <div className="absolute -top-6 right-4 md:-top-10 md:right-10 z-30 animate-fade-in-up delay-300">
               <div className="bg-white p-4 md:p-6 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center text-center border border-black/5 hover:scale-105 transition-transform duration-500">
-                <span className="text-4xl md:text-5xl font-black text-primary tracking-tighter">45+</span>
-                <span className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-widest mt-1">Years of<br />Excellence</span>
+                <span className="text-3xl md:text-4xl font-semibold text-primary tracking-tighter">45+</span>
+                <span className="text-[10px] md:text-xs font-semibold text-secondary uppercase tracking-widest mt-1">Years of<br />Excellence</span>
               </div>
             </div>
             {/* Floating Products & Character Overlay */}

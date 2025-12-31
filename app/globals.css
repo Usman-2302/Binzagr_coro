@@ -13,11 +13,23 @@
 
 :root {
   --e-global-color-primary: #F26F21;
-  --e-global-color-secondary: #000000;
-  --e-global-color-text: #7A7A7A;
+  --e-global-color-secondary: #28303D;
+  /* Updated to brand-dark */
+  --e-global-color-text: #28303D;
+  /* Body text color */
+  --e-global-color-muted: #7A7A7A;
+  /* Muted text color */
   --e-global-color-accent: #0DA14E;
   --e-global-color-white: #FFFFFF;
   --e-global-color-yellow: #FDB815;
+  --e-global-background: #F9F4F1;
+  /* Light background color */
+
+  /* Brand Unification Tokens */
+  --brand-spacing-standard: 8rem;
+  /* Equivalent to py-32 */
+  --brand-card-radius: 2rem;
+  --brand-transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
@@ -31,17 +43,20 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    /* Primary Orange */
+    /* Brand Colors */
     --primary: 21 89% 54%;
+    /* #F26F21 */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary Black */
-    --secondary: 0 0% 0%;
+    --secondary: 216 21% 20%;
+    /* #28303D (Brand Dark) */
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted/Text Gray */
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 48%;
+    /* #7A7A7A fallback */
+    --brand-muted: 0 0% 48%;
+    /* #7A7A7A */
 
     /* Accent Green */
     --accent: 150 85% 34%;
@@ -132,28 +147,42 @@
 
   body {
     background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    color: rgb(40, 48, 61);
+    font-size: 20px;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  h1,
+  h1 {
+    font-family: var(--font-rns-sans);
+    font-weight: 800;
+    /* Extra Bold */
+    letter-spacing: -0.02em;
+    color: var(--primary);
+  }
+
   h2 {
-    font-family: Merriweather, serif;
-    font-weight: 900;
-    letter-spacing: -0.025em;
-    color: hsl(var(--secondary));
+    font-family: var(--font-rns-sans);
+    font-size: 48px;
+    font-weight: 800;
+    /* Extra Bold */
+    letter-spacing: -0.02em;
+    color: rgb(242, 111, 33);
+    /* Brand Orange */
   }
 
   h3,
   h4,
   h5,
   h6 {
-    font-family: Poppins, Inter, system-ui, sans-serif;
+    font-family: var(--font-rns-sans);
     font-weight: 700;
-    letter-spacing: -0.025em;
-    color: hsl(var(--secondary));
+    /* Bold */
+    letter-spacing: -0.01em;
+    color: rgb(40, 48, 61);
+    /* Brand Dark */
   }
 
   p {

@@ -79,14 +79,14 @@ export function Header() {
               <Link
                 href={link.path}
                 className={cn(
-                  "relative flex items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.15em] transition-all duration-300 hover:text-primary",
+                  "relative flex items-center gap-1.5 text-base transition-all duration-300 hover:text-primary",
                   pathname === link.path
-                    ? "text-primary"
+                    ? "font-bold text-primary"
                     : isScrolled
-                      ? "text-white/90"
+                      ? "font-normal text-white/90"
                       : ["/", "/about", "/brands", "/distribution", "/contact", "/terms", "/privacy", "/careers"].includes(pathname)
-                        ? "text-white"
-                        : "text-secondary"
+                        ? "font-normal text-white"
+                        : "font-normal text-brand-dark"
                 )}
               >
                 {link.name}
@@ -166,7 +166,7 @@ export function Header() {
                 href={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={cn(
-                  "text-3xl font-black uppercase tracking-tight transition-colors py-2",
+                  "text-3xl font-semibold uppercase tracking-tight transition-colors py-2",
                   pathname === link.path
                     ? "text-primary"
                     : "text-white/80 hover:text-primary"

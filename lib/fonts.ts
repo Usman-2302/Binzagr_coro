@@ -1,4 +1,12 @@
 import localFont from 'next/font/local';
+import { Roboto } from 'next/font/google';
+
+export const roboto = Roboto({
+    weight: ['400', '500', '700'],
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-roboto',
+});
 
 // RNS Sanz Font Family - Official Binzagr-Coro Typography
 export const rnsSans = localFont({

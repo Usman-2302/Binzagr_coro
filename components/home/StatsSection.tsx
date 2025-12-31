@@ -70,11 +70,11 @@ function StatCard({
       <div className={`inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-secondary/5 mb-6 group-hover:scale-110 group-hover:bg-primary/10 group-hover:shadow-lg transition-all duration-500 ${stat.color}`}>
         <Icon className="h-10 w-10" />
       </div>
-      <p className="text-5xl md:text-7xl font-black mb-2 text-secondary tabular-nums tracking-tighter">
+      <p className="text-4xl md:text-6xl font-semibold mb-2 text-secondary tabular-nums tracking-tighter">
         {count}
         {stat.suffix}
       </p>
-      <p className="text-muted-foreground font-black uppercase tracking-[0.2em] text-[10px] md:text-xs">{stat.label}</p>
+      <p className="text-muted-foreground font-semibold uppercase tracking-[0.2em] text-[10px] md:text-xs">{stat.label}</p>
     </div>
   );
 }
@@ -83,7 +83,7 @@ export function StatsSection() {
   const { ref, isInView } = useInView({ threshold: 0.3, triggerOnce: false });
 
   return (
-    <Section className="bg-orange-50/50 relative overflow-hidden border-y border-secondary/5">
+    <Section className="bg-brand-bg relative overflow-hidden border-y border-secondary/5">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(242,111,33,0.03),transparent_50%)] pointer-events-none" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <SectionHeading
