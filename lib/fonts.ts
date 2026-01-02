@@ -1,15 +1,7 @@
 import localFont from 'next/font/local';
-import { Roboto } from 'next/font/google';
-
-export const roboto = Roboto({
-    weight: ['400', '500', '700'],
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-roboto',
-});
 
 // RNS Sanz Font Family - Official Binzagr-Coro Typography
-export const rnsSans = localFont({
+export const RNS = localFont({
     src: [
         {
             path: '../public/fonts/RNSSanz-Light.otf',
@@ -37,17 +29,7 @@ export const rnsSans = localFont({
             style: 'normal',
         },
     ],
-    variable: '--font-rns-sans',
+    variable: '--font-rns',
     display: 'swap',
-    fallback: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Segoe UI',
-        'Roboto',
-        'Oxygen',
-        'Ubuntu',
-        'Cantarell',
-        'Helvetica Neue',
-        'sans-serif',
-    ],
+    fallback: ['sans-serif'],
 });

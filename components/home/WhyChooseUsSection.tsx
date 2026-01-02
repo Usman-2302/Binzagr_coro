@@ -42,7 +42,7 @@ export function WhyChooseUsSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <SectionHeading
-            title="The Coro Difference"
+            title="The Binzagr Coro Advantage"
             subtitle="An authoritative legacy built on industrial scale, international standards, and a deep commitment to the Kingdom's future."
             className="mb-0"
           />

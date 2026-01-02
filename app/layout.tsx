@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { rnsSans, roboto } from "@/lib/fonts";
+import { RNS } from "@/lib/fonts";
 import { AppProviders } from "@/components/AppProviders";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${rnsSans.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${RNS.variable}`}>
       <body className="font-sans antialiased text-brand-dark">
         <AppProviders>
           <div className="min-h-screen flex flex-col">

@@ -65,18 +65,9 @@ module.exports = {
             },
             fontFamily: {
                 sans: [
-                    'var(--font-rns-sans)',
-                    '-apple-system',
-                    'BlinkMacSystemFont',
-                    '"Segoe UI"',
-                    'Roboto',
-                    'Oxygen',
-                    'Ubuntu',
-                    'Cantarell',
-                    '"Helvetica Neue"',
+                    'var(--font-rns)',
                     'sans-serif',
                 ],
-                roboto: ['var(--font-roboto)', 'sans-serif'],
             },
             borderRadius: {
                 lg: "var(--radius)",

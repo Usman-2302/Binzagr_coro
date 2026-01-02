@@ -36,7 +36,7 @@ export default function ContactPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/90" />
                 </div>
                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">Contact Us</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">Contact <span className="text-primary">Us</span></h1>
                     <p className="text-xl text-white/70 max-w-2xl mx-auto animate-fade-up delay-100">
                         We'd love to hear from you. Get in touch with our team.
                     </p>
