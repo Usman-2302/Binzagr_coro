@@ -58,23 +58,23 @@ export default function BrandsPage() {
     return (
         <div className="bg-zinc-50 min-h-screen text-secondary overflow-hidden">
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
+            {/* Hero Section */}
+            <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-black">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/assets/sources/binzagr_co_ro_ltd_cover.jpeg"
                         alt="Binzagr Co-Ro Portfolio"
                         className="w-full h-full object-cover opacity-90 scale-105 animate-subtle-zoom"
                     />
-                    {/* Dark overlay for text readability, fading to white at bottom - adjusted to keep text area clear */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 from-0% via-black/50 via-20% to-black/70" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
                 </div>
 
-                <div className="container relative z-10 px-4 text-center h-full flex flex-col justify-center">
+                <div className="container mx-auto px-4 text-center relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="space-y-6 mt-auto mb-auto"
+                        className="space-y-6"
                     >
                         <h1 className="text-5xl md:text-7xl font-extrabold uppercase tracking-tighter text-white drop-shadow-2xl">
                             Our <span className="text-primary">Brands</span>
@@ -82,15 +82,6 @@ export default function BrandsPage() {
                         <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-lg">
                             Decades of quality, innovation, and refreshing moments tailored for the region.
                         </p>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1, duration: 1 }}
-                        className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce"
-                    >
-                        <ArrowRight className="rotate-90 text-zinc-900 h-6 w-6" />
                     </motion.div>
                 </div>
             </section>

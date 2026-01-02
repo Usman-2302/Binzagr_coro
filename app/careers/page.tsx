@@ -42,25 +42,26 @@ export default function CareersPage() {
     return (
         <div className="min-h-screen">
             {/* 1. Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-32 md:pt-0">
+            {/* 1. Hero Section */}
+            <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-black">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     {/* Using a factory/industrial image for authority */}
                     <img
                         src="/assets/sources/1760930665695.jpeg"
                         alt="Binzagr Coro Facility"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover opacity-60 scale-105 animate-subtle-zoom"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/90 via-zinc-950/70 to-zinc-950/30" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
                 </div>
 
-                <div className="container relative z-10 px-4">
-                    <div className="max-w-3xl animate-fade-in-up">
-                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Careers at Binzagr Coro</span>
-                        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                            Build Your Career with <br /> <span className="text-primary">Manufacturing Excellence</span>
+                <div className="container mx-auto px-4 text-center relative z-10">
+                    <div className="max-w-4xl mx-auto animate-fade-in-up">
+                        <span className="text-primary font-semibold tracking-[0.3em] uppercase text-xs mb-6 block">Careers at Binzagr Coro</span>
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight">
+                            Build Your Career with <br /> <span className="text-primary italic">Manufacturing Excellence</span>
                         </h1>
-                        <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
+                        <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-medium">
                             Join a stable, high-performance environment where industrial precision meets professional growth. We are looking for dedicated talent to drive our legacy forward.
                         </p>
                     </div>
